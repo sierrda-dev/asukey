@@ -16,8 +16,8 @@
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "Coffre_0.1.5.1_x64.msix":  "fcee58ba7b7c40262987f4b0adad365330049faa8c573676d1cbe65a6b537697",
-                   "Coffre-0.1.5.1-kit.zip":  "101af1a45e3e377c0de8d2e9439a8d221892a574828d9140e10278f55c6b0387",
-                   "Coffre-0.1.5.1-portable.zip":  "4ad99a8f460a51eceaf0a16ce42aded852e5ffdc43eb5372f43d37965d9d332a"
+                   "Coffre_0.1.5.1_x64.msix":  "98ec7a3d6d16481ec493f09f381663d48a6c4282714f2ca1f358ac7dead2bf22",
+                   "Coffre-0.1.5.1-kit.zip":  "fc4387e6d043ed5c459a61a9742c78ea8378db2c1f6bc3dfffa8733f89969c92",
+                   "Coffre-0.1.5.1-portable.zip":  "89e85d322f878cb4fdc5a30a42bb6d99bac65f13c27d9aff72b709ec1bab6aab"
                }
 }
