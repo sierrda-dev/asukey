@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Mises à jour automatiques de Coffre (0.1.2). Publié sur https://sierrda-dev.github.io/coffre/Coffre.appinstaller
+  Mises à jour automatiques d'asukey (0.1.2). Publié sur https://sierrda-dev.github.io/coffre/Coffre.appinstaller
   par tools\release.ps1 ; les paquets sont des fichiers de la version GitHub (Releases) correspondante.
   Windows n'installe une version que si elle est signée par le même certificat que celle en place.
-  ShowPrompt="false" : c'est Coffre qui affiche sa propre fenêtre de mise à jour ; Windows met aussi à jour
+  ShowPrompt="false" : c'est asukey qui affiche sa propre fenêtre de mise à jour ; Windows met aussi à jour
   en arrière-plan, application fermée.
 -->
 <AppInstaller xmlns="http://schemas.microsoft.com/appx/appinstaller/2021" Version="0.1.5.1" Uri="https://sierrda-dev.github.io/coffre/Coffre.appinstaller">

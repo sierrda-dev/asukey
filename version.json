@@ -2,13 +2,22 @@
     "version":  "0.1.5.1",
     "date":  "2026-11-16",
     "notes":  [
+                  "Nouveau nom partout : fenêtre, menu Démarrer, barre des tâches, extension de navigateur, extension VS Code, application Mac et ligne de commande. La mise à j…",
+                  "Rien ne bouge sur le disque : un coffre existant reste dans Documents\\Coffre. Les nouvelles installations utilisent Documents\\asukey\\asukey.vault, et les nou…",
+                  "Ligne de commande : la commande s\u0027appelle asukey (asukey run, asukey read, asukey mcp…). L\u0027installateur du kit installe aussi coffre pour que tes scripts con…",
+                  "Les références de secrets s\u0027écrivent asukey://Coffre/Élément/champ ; les anciennes références coffre://… restent reconnues partout (ligne de commande, fichie…",
                   "Nouvelle icône : disque bleu-violet avec trou de serrure, entouré d\u0027un anneau, sur Windows (barre des tâches, menu Démarrer, Store), dans l\u0027extension de navi…",
                   "Nouvelle rubrique Réglages › Apparence : thème (comme Windows, clair, sombre), densité Confortable ou Compact (lignes de la liste et de la barre latérale plu…",
                   "Barre latérale : choisis les rubriques toujours affichées (Catégories, Tags) et, en option, le nombre d\u0027éléments à côté de chaque rubrique.",
                   "Couleur de la barre latérale : neuf teintes (Brume, Lavande, Menthe, Sable, Pétale, Ardoise, Nuit, Prune, Forêt) ou une couleur personnalisée ; le texte pass…",
-                  "Couleur d\u0027accent : bleu de Coffre ou huit autres couleurs, ou une couleur personnalisée, pour les boutons, la sélection et les liens.",
-                  "Installer l\u0027extension de navigateur depuis Coffre : menu ⋯ › « Installer l\u0027extension de navigateur… » (ou Réglages › Navigateur). Choisis Chrome, Edge, Brave…",
-                  "Quitter Coffre depuis le menu ⋯ de la barre latérale et le menu du compte (Ctrl+Q) : le coffre est verrouillé puis l\u0027application se ferme.",
+                  "Couleur d\u0027accent : bleu d\u0027asukey ou huit autres couleurs, ou une couleur personnalisée, pour les boutons, la sélection et les liens.",
+                  "Installer l\u0027extension de navigateur depuis asukey : menu ⋯ › « Installer l\u0027extension de navigateur… » (ou Réglages › Navigateur). Choisis Chrome, Edge, Brave…",
+                  "Enregistrement automatique des identifiants, plus fiable : la bulle « Enregistrer dans asukey ? » apparaît aussi pour les connexions en deux pages (l\u0027identif…",
+                  "Nouvelle fenêtre de l\u0027extension : compte, recherche dans tout le coffre, générateur et bouton + en haut ; à gauche les suggestions pour le site ouvert (ou to…",
+                  "Deuxième appareil plus simple : au premier lancement, « J\u0027utilise déjà asukey sur un autre appareil » cherche les coffres dans OneDrive, Dropbox, Google Driv…",
+                  "Connexion directe à OneDrive, Google Drive et pCloud (Réglages › Synchronisation › « Se connecter… ») : connexion au compte dans le navigateur, choix ou créa…",
+                  "Via l\u0027application du service : pCloud Drive rejoint OneDrive, Dropbox, Google Drive et iCloud, et « Choisir le dossier… » permet de choisir ou créer le sous-…",
+                  "Quitter asukey depuis le menu ⋯ de la barre latérale et le menu du compte (Ctrl+Q) : le coffre est verrouillé puis l\u0027application se ferme.",
                   "La rubrique Développeur est retirée de la barre latérale, des réglages et de la Sentinelle (les fonctions restent dans le code pour plus tard).",
                   "Pièce jointe sur n\u0027importe quel élément : menu ⋮ de la fiche › « Ajouter une pièce jointe… »."
               ],
@@ -16,8 +25,8 @@
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "Coffre_0.1.5.1_x64.msix":  "98ec7a3d6d16481ec493f09f381663d48a6c4282714f2ca1f358ac7dead2bf22",
-                   "Coffre-0.1.5.1-kit.zip":  "fc4387e6d043ed5c459a61a9742c78ea8378db2c1f6bc3dfffa8733f89969c92",
-                   "Coffre-0.1.5.1-portable.zip":  "89e85d322f878cb4fdc5a30a42bb6d99bac65f13c27d9aff72b709ec1bab6aab"
+                   "asukey-0.1.5.1-kit.zip":  "3d0a564873081e2769ee47db9b910f2be92a5013ff3bceb1d7ff6e6b2650ccc8",
+                   "asukey-0.1.5.1-portable.zip":  "39c5e402e270ea2a60976146e6b824d35621da90e6528361e28aeb54e490a8d7",
+                   "Coffre_0.1.5.1_x64.msix":  "4b48f07e20e4fc36b243e7e7d5912cf7e2a6a777092f4d682a3a1d34f12dd937"
                }
 }
