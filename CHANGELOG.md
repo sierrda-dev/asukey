@@ -1,5 +1,35 @@
 # Journal des versions
 
+## 0.1.5 — 16 novembre 2026
+
+**Sécurité des données**
+- **Mises à jour signées** : l'annonce de chaque version (version.json) est signée avec une clé gardée sur le PC de publication, et contient l'empreinte de chaque fichier publié. Coffre refuse toute mise à jour dont la signature ne correspond pas : un compte GitHub piraté ne suffirait plus à diffuser un faux Coffre. Sur Mac, le fichier téléchargé est en plus vérifié avant d'être ouvert.
+- **Protection contre les anciennes copies** : chaque appareil retient la version la plus récente de ton coffre qu'il a vue. Si le fichier est remplacé par une copie plus ancienne (dossier synchronisé compromis, historique de OneDrive…), Coffre prévient et ne l'ouvre qu'avec ton accord. Une ancienne copie ne peut plus remettre en place un ancien mot de passe maître lors de la synchronisation. Restaurer une sauvegarde depuis les réglages ne déclenche pas l'alerte.
+- **Mot de passe maître mieux protégé** : la dérivation Argon2id utilise jusqu'à 256 Mio de mémoire (au lieu de 64), selon ce que ton appareil calcule en environ une seconde. Un vol du fichier coûte jusqu'à quatre fois plus cher à attaquer. Ton coffre est mis à niveau tout seul au prochain déverrouillage par mot de passe ; Windows Hello, Touch ID, la clé secrète et la clé de récupération continuent de fonctionner, et les autres appareils suivent automatiquement.
+- **Fichiers endommagés ou piégés** : des milliers de fichiers de coffre, contenus, imports (CSV, Bitwarden, 1Password, KeePass) et annonces de version modifiés au hasard sont testés à chaque version. Les cas trouvés (base64 invalide, valeurs nulles, types inattendus) donnent maintenant un message clair au lieu d'une erreur imprévue.
+
+**Optimisation et préparation au Microsoft Store**
+- La Sentinelle est environ six fois plus rapide sur un gros coffre (5 000 éléments : 0,6 s → 0,1 s, puis quelques centièmes de seconde) : le catalogue des services est indexé une fois, l'hôte de chaque adresse et la robustesse de chaque mot de passe sont mémorisés (oubliés au verrouillage).
+- La liste ne se recrée plus quand seul le contenu d'éléments change (favori, renommage sans changement d'ordre) : seules les lignes visibles sont redessinées.
+- Les rubriques des réglages déjà ouvertes s'affichent sans être reconstruites.
+- Démarrage plus rapide : l'application est précompilée (ReadyToRun) dans le paquet.
+- Sérialisation du coffre générée à la compilation, vérifiée octet pour octet identique à l'ancienne : prépare la compilation native.
+- Icônes refaites à toutes les tailles demandées par Windows et le Store (barre des tâches, menu Démarrer, écran de démarrage), nettes de 16 à 256 pixels.
+- **Microsoft Store** : `tools\store.ps1` produit le paquet à déposer dans l'Espace partenaires (identité du Store, sans l'autorisation de mise à jour automatique). Installé depuis le Store, Coffre ne vérifie plus ses mises à jour lui-même : « Rechercher une mise à jour » ouvre la page du Store. Fiche du Store prête dans docs/STORE.md, politique de confidentialité publiée sur le site (confidentialite.html).
+- Pièce jointe sur n'importe quel élément (et plus seulement les documents) : menu ⋮ de la fiche › « Ajouter une pièce jointe… ».
+- En-têtes de la liste et de la fiche alignés : « Toutes les catégories », le filtre et le tri sont à la même hauteur que le propriétaire et le coffre de l'élément ouvert.
+- Code : réglages et barre latérale découpés en plusieurs fichiers, sans changement de comportement.
+
+**Coffre pour macOS (première version)**
+- Application Mac native (SwiftUI, macOS 13 ou plus récent, Apple Silicon et Intel), à télécharger en **Coffre-0.1.5-mac.dmg**.
+- Ouvre le même fichier `.vault` que la version Windows, avec le même mot de passe maître (et la même clé secrète si tu en as une) : place-le dans iCloud Drive, OneDrive ou Dropbox. Les modifications faites sur le PC et sur le Mac sont fusionnées automatiquement, avec les mêmes règles que sur Windows.
+- Écran de verrouillage identique dans l'esprit : ta photo de profil en carré arrondi, anneau animé pendant la vérification, Touch ID en bouton principal, jamais ton nom.
+- Barre latérale (tous les éléments, favoris, catégories, coffres, tags, Sentinelle, corbeille), recherche, fiche avec copie au clic, code 2FA qui défile, création et modification des éléments avec le même générateur de mots de passe.
+- Sentinelle : mots de passe faibles, réutilisés, comptes en double, score ; vérification facultative des mots de passe compromis (Have I Been Pwned, k-anonymat), comme sur Windows.
+- Presse-papiers effacé automatiquement, secrets marqués confidentiels ; verrouillage automatique et à la mise en veille.
+- Coffre sur Mac vérifie lui aussi les mises à jour sur le site.
+- Pas encore sur Mac : remplissage dans le navigateur, passkeys, pièces jointes, coffres partagés, envois, Mode voyage, import et export. Ces données sont conservées intactes et restent utilisables depuis Windows.
+
 ## 0.1.4 — 13 novembre 2026
 
 **Plus rapide, nouvel écran de verrouillage, éditeur et réglages revus**
@@ -8,6 +38,8 @@
 - L'analyse de la Sentinelle se fait en arrière-plan : plus de petit gel après chaque enregistrement sur un gros coffre. Les pastilles, le compteur de la barre latérale et la fiche ouverte se mettent à jour d'eux-mêmes.
 - Mesures de performance dans le journal local de Coffre (%LOCALAPPDATA%\Coffre\coffre.log) : temps de démarrage, temps d'ouverture du coffre et mémoire utilisée. Rien n'est envoyé.
 - **Nouvel écran de verrouillage**, épuré et sans encadré : ta photo de profil au centre (ou le logo de Coffre), Windows Hello en bouton principal quand il est disponible, puis le mot de passe ; avertissement « Verr. Maj est activée », secousse du champ en cas d'erreur, rappel du verrouillage automatique et de Ctrl+Q en bas. Ton nom n'apparaît jamais. La photo est copiée hors du coffre pour s'afficher avant le déverrouillage : Réglages › Sécurité › « Photo sur l'écran de verrouillage » pour la retirer.
+- **Animation de déverrouillage** autour de la photo de profil : un anneau en dégradé tourne pendant la vérification ; au déverrouillage, la photo rebondit légèrement et l'anneau s'élargit en s'effaçant (« Coffre déverrouillé ») ; en cas d'erreur, il rougit un instant. Rien ne bouge si les effets d'animation sont désactivés dans Windows.
+- **Formes harmonisées** : une seule échelle d'arrondis dans toute l'application (petits boutons 6, boutons et champs 8, cartes et bulles 12). Photos de profil, initiales, icônes de coffre et pastilles d'icônes ont la même forme de carré arrondi que les tuiles des éléments, y compris sur l'écran de verrouillage. Marges de la barre latérale alignées (photo du compte et rubriques au même retrait).
 - **Watchtower devient la Sentinelle** (barre latérale, page, journal, aide). En ligne de commande : `coffre sentinelle` (`coffre watchtower` reste accepté).
 - **Comportement du remplissage par site web** : le bouton à côté de chaque adresse propose « Remplir n'importe où sur ce site web » (par défaut : toutes les adresses du même site, par exemple login.exemple.fr et www.exemple.fr), « Remplir uniquement sur cet hôte précis » ou « Ne jamais remplir sur ce site web », avec une phrase qui dit où l'élément sera proposé.
 - **Mot de passe dans l'éditeur** : au clic, il s'affiche en clair et une bulle propose « Créer un nouveau mot de passe ». Le générateur s'ouvre sous le champ : Annuler, ↻, Utiliser ; aperçu avec chiffres en bleu et symboles en rouge, barre de robustesse ; type (aléatoire, mémorisable, code PIN), nombre de caractères, chiffres, symboles. Les choix sont mémorisés.

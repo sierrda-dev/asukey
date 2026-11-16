@@ -1,20 +1,36 @@
 {
-    "version":  "0.1.4",
-    "date":  "2026-11-13",
+    "version":  "0.1.5",
+    "date":  "2026-11-16",
     "notes":  [
-                  "La liste des éléments ne crée plus que les lignes visibles (une vingtaine), recyclées en défilant, au lieu d\u0027une ligne par élément : ouverture, défilement et…",
-                  "La recherche attend 150 ms après la dernière frappe au lieu de tout recalculer à chaque lettre, et cherche dans un texte préparé une fois par élément (titre,…",
-                  "L\u0027analyse de la Sentinelle se fait en arrière-plan : plus de petit gel après chaque enregistrement sur un gros coffre. Les pastilles, le compteur de la barre…",
-                  "Mesures de performance dans le journal local de Coffre (%LOCALAPPDATA%\\Coffre\\coffre.log) : temps de démarrage, temps d\u0027ouverture du coffre et mémoire utilis…",
-                  "Nouvel écran de verrouillage, épuré et sans encadré : ta photo de profil au centre (ou le logo de Coffre), Windows Hello en bouton principal quand il est dis…",
-                  "Watchtower devient la Sentinelle (barre latérale, page, journal, aide). En ligne de commande : coffre sentinelle (coffre watchtower reste accepté).",
-                  "Comportement du remplissage par site web : le bouton à côté de chaque adresse propose « Remplir n\u0027importe où sur ce site web » (par défaut : toutes les adres…",
-                  "Mot de passe dans l\u0027éditeur : au clic, il s\u0027affiche en clair et une bulle propose « Créer un nouveau mot de passe ». Le générateur s\u0027ouvre sous le champ : An…",
-                  "Réglages : colonne de gauche avec une tuile de couleur par rubrique, rubrique ouverte en bleu.",
-                  "Illustration de la fiche vide redessinée, plus abstraite : anneaux, formes arrondies et points aux couleurs de Coffre.",
-                  "Nouveau test automatique sur un coffre de 5 000 éléments (enregistrement, modification, Sentinelle, réouverture), pour repérer toute version qui ralentirait."
+                  "Mises à jour signées : l\u0027annonce de chaque version (version.json) est signée avec une clé gardée sur le PC de publication, et contient l\u0027empreinte de chaque…",
+                  "Protection contre les anciennes copies : chaque appareil retient la version la plus récente de ton coffre qu\u0027il a vue. Si le fichier est remplacé par une cop…",
+                  "Mot de passe maître mieux protégé : la dérivation Argon2id utilise jusqu\u0027à 256 Mio de mémoire (au lieu de 64), selon ce que ton appareil calcule en environ u…",
+                  "Fichiers endommagés ou piégés : des milliers de fichiers de coffre, contenus, imports (CSV, Bitwarden, 1Password, KeePass) et annonces de version modifiés au…",
+                  "La Sentinelle est environ six fois plus rapide sur un gros coffre (5 000 éléments : 0,6 s → 0,1 s, puis quelques centièmes de seconde) : le catalogue des ser…",
+                  "La liste ne se recrée plus quand seul le contenu d\u0027éléments change (favori, renommage sans changement d\u0027ordre) : seules les lignes visibles sont redessinées.",
+                  "Les rubriques des réglages déjà ouvertes s\u0027affichent sans être reconstruites.",
+                  "Démarrage plus rapide : l\u0027application est précompilée (ReadyToRun) dans le paquet.",
+                  "Sérialisation du coffre générée à la compilation, vérifiée octet pour octet identique à l\u0027ancienne : prépare la compilation native.",
+                  "Icônes refaites à toutes les tailles demandées par Windows et le Store (barre des tâches, menu Démarrer, écran de démarrage), nettes de 16 à 256 pixels.",
+                  "Microsoft Store : tools\\store.ps1 produit le paquet à déposer dans l\u0027Espace partenaires (identité du Store, sans l\u0027autorisation de mise à jour automatique).…",
+                  "Pièce jointe sur n\u0027importe quel élément (et plus seulement les documents) : menu ⋮ de la fiche › « Ajouter une pièce jointe… ».",
+                  "En-têtes de la liste et de la fiche alignés : « Toutes les catégories », le filtre et le tri sont à la même hauteur que le propriétaire et le coffre de l\u0027élé…",
+                  "Code : réglages et barre latérale découpés en plusieurs fichiers, sans changement de comportement.",
+                  "Application Mac native (SwiftUI, macOS 13 ou plus récent, Apple Silicon et Intel), à télécharger en Coffre-0.1.5-mac.dmg.",
+                  "Ouvre le même fichier .vault que la version Windows, avec le même mot de passe maître (et la même clé secrète si tu en as une) : place-le dans iCloud Drive,…",
+                  "Écran de verrouillage identique dans l\u0027esprit : ta photo de profil en carré arrondi, anneau animé pendant la vérification, Touch ID en bouton principal, jama…",
+                  "Barre latérale (tous les éléments, favoris, catégories, coffres, tags, Sentinelle, corbeille), recherche, fiche avec copie au clic, code 2FA qui défile, créa…",
+                  "Sentinelle : mots de passe faibles, réutilisés, comptes en double, score ; vérification facultative des mots de passe compromis (Have I Been Pwned, k-anonyma…",
+                  "Presse-papiers effacé automatiquement, secrets marqués confidentiels ; verrouillage automatique et à la mise en veille.",
+                  "Coffre sur Mac vérifie lui aussi les mises à jour sur le site.",
+                  "Pas encore sur Mac : remplissage dans le navigateur, passkeys, pièces jointes, coffres partagés, envois, Mode voyage, import et export. Ces données sont cons…"
               ],
     "appinstaller":  "https://sierrda-dev.github.io/coffre/Coffre.appinstaller",
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
-    "minimum":  ""
+    "minimum":  "",
+    "sha256":  {
+                   "Coffre_0.1.5_x64.msix":  "3e94d2f6519bb91f3fb97dac24cc517ed941ffd109f8a8d24adaf71760bb73d4",
+                   "Coffre-0.1.5-kit.zip":  "7f92ca859c6f1d57bc6a12763d0a0a454e21d41665bf0fcef2f3007b6196a2a6",
+                   "Coffre-0.1.5-portable.zip":  "1873d54355319b4939bb71af9e5cf8e31a9ac0f0b6524d38865fd1a28f2202f1"
+               }
 }
