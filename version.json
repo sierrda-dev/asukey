@@ -25,8 +25,8 @@
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "asukey-0.1.5.1-kit.zip":  "3d0a564873081e2769ee47db9b910f2be92a5013ff3bceb1d7ff6e6b2650ccc8",
-                   "asukey-0.1.5.1-portable.zip":  "39c5e402e270ea2a60976146e6b824d35621da90e6528361e28aeb54e490a8d7",
-                   "Coffre_0.1.5.1_x64.msix":  "4b48f07e20e4fc36b243e7e7d5912cf7e2a6a777092f4d682a3a1d34f12dd937"
+                   "asukey-0.1.5.1-kit.zip":  "2edfcfdfb483eb86bab5eb50163138ead039dfeead14ebcac44426c74715221c",
+                   "asukey-0.1.5.1-portable.zip":  "f3e11fd8419c3c93ab78f4560563f0556f3f5852ac809b5f0e116be07692343a",
+                   "Coffre_0.1.5.1_x64.msix":  "98278945bb203248335e49b68a7bf952ec1513684698342fa0a58189552337ea"
                }
 }
