@@ -1,36 +1,23 @@
 {
-    "version":  "0.1.5",
+    "version":  "0.1.5.1",
     "date":  "2026-11-16",
     "notes":  [
-                  "Mises à jour signées : l\u0027annonce de chaque version (version.json) est signée avec une clé gardée sur le PC de publication, et contient l\u0027empreinte de chaque…",
-                  "Protection contre les anciennes copies : chaque appareil retient la version la plus récente de ton coffre qu\u0027il a vue. Si le fichier est remplacé par une cop…",
-                  "Mot de passe maître mieux protégé : la dérivation Argon2id utilise jusqu\u0027à 256 Mio de mémoire (au lieu de 64), selon ce que ton appareil calcule en environ u…",
-                  "Fichiers endommagés ou piégés : des milliers de fichiers de coffre, contenus, imports (CSV, Bitwarden, 1Password, KeePass) et annonces de version modifiés au…",
-                  "La Sentinelle est environ six fois plus rapide sur un gros coffre (5 000 éléments : 0,6 s → 0,1 s, puis quelques centièmes de seconde) : le catalogue des ser…",
-                  "La liste ne se recrée plus quand seul le contenu d\u0027éléments change (favori, renommage sans changement d\u0027ordre) : seules les lignes visibles sont redessinées.",
-                  "Les rubriques des réglages déjà ouvertes s\u0027affichent sans être reconstruites.",
-                  "Démarrage plus rapide : l\u0027application est précompilée (ReadyToRun) dans le paquet.",
-                  "Sérialisation du coffre générée à la compilation, vérifiée octet pour octet identique à l\u0027ancienne : prépare la compilation native.",
-                  "Icônes refaites à toutes les tailles demandées par Windows et le Store (barre des tâches, menu Démarrer, écran de démarrage), nettes de 16 à 256 pixels.",
-                  "Microsoft Store : tools\\store.ps1 produit le paquet à déposer dans l\u0027Espace partenaires (identité du Store, sans l\u0027autorisation de mise à jour automatique).…",
-                  "Pièce jointe sur n\u0027importe quel élément (et plus seulement les documents) : menu ⋮ de la fiche › « Ajouter une pièce jointe… ».",
-                  "En-têtes de la liste et de la fiche alignés : « Toutes les catégories », le filtre et le tri sont à la même hauteur que le propriétaire et le coffre de l\u0027élé…",
-                  "Code : réglages et barre latérale découpés en plusieurs fichiers, sans changement de comportement.",
-                  "Application Mac native (SwiftUI, macOS 13 ou plus récent, Apple Silicon et Intel), à télécharger en Coffre-0.1.5-mac.dmg.",
-                  "Ouvre le même fichier .vault que la version Windows, avec le même mot de passe maître (et la même clé secrète si tu en as une) : place-le dans iCloud Drive,…",
-                  "Écran de verrouillage identique dans l\u0027esprit : ta photo de profil en carré arrondi, anneau animé pendant la vérification, Touch ID en bouton principal, jama…",
-                  "Barre latérale (tous les éléments, favoris, catégories, coffres, tags, Sentinelle, corbeille), recherche, fiche avec copie au clic, code 2FA qui défile, créa…",
-                  "Sentinelle : mots de passe faibles, réutilisés, comptes en double, score ; vérification facultative des mots de passe compromis (Have I Been Pwned, k-anonyma…",
-                  "Presse-papiers effacé automatiquement, secrets marqués confidentiels ; verrouillage automatique et à la mise en veille.",
-                  "Coffre sur Mac vérifie lui aussi les mises à jour sur le site.",
-                  "Pas encore sur Mac : remplissage dans le navigateur, passkeys, pièces jointes, coffres partagés, envois, Mode voyage, import et export. Ces données sont cons…"
+                  "Nouvelle icône : disque bleu-violet avec trou de serrure, entouré d\u0027un anneau, sur Windows (barre des tâches, menu Démarrer, Store), dans l\u0027extension de navi…",
+                  "Nouvelle rubrique Réglages › Apparence : thème (comme Windows, clair, sombre), densité Confortable ou Compact (lignes de la liste et de la barre latérale plu…",
+                  "Barre latérale : choisis les rubriques toujours affichées (Catégories, Tags) et, en option, le nombre d\u0027éléments à côté de chaque rubrique.",
+                  "Couleur de la barre latérale : neuf teintes (Brume, Lavande, Menthe, Sable, Pétale, Ardoise, Nuit, Prune, Forêt) ou une couleur personnalisée ; le texte pass…",
+                  "Couleur d\u0027accent : bleu de Coffre ou huit autres couleurs, ou une couleur personnalisée, pour les boutons, la sélection et les liens.",
+                  "Installer l\u0027extension de navigateur depuis Coffre : menu ⋯ › « Installer l\u0027extension de navigateur… » (ou Réglages › Navigateur). Choisis Chrome, Edge, Brave…",
+                  "Quitter Coffre depuis le menu ⋯ de la barre latérale et le menu du compte (Ctrl+Q) : le coffre est verrouillé puis l\u0027application se ferme.",
+                  "La rubrique Développeur est retirée de la barre latérale, des réglages et de la Sentinelle (les fonctions restent dans le code pour plus tard).",
+                  "Pièce jointe sur n\u0027importe quel élément : menu ⋮ de la fiche › « Ajouter une pièce jointe… »."
               ],
     "appinstaller":  "https://sierrda-dev.github.io/coffre/Coffre.appinstaller",
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "Coffre_0.1.5_x64.msix":  "3e94d2f6519bb91f3fb97dac24cc517ed941ffd109f8a8d24adaf71760bb73d4",
-                   "Coffre-0.1.5-kit.zip":  "7f92ca859c6f1d57bc6a12763d0a0a454e21d41665bf0fcef2f3007b6196a2a6",
-                   "Coffre-0.1.5-portable.zip":  "1873d54355319b4939bb71af9e5cf8e31a9ac0f0b6524d38865fd1a28f2202f1"
+                   "Coffre_0.1.5.1_x64.msix":  "fcee58ba7b7c40262987f4b0adad365330049faa8c573676d1cbe65a6b537697",
+                   "Coffre-0.1.5.1-kit.zip":  "101af1a45e3e377c0de8d2e9439a8d221892a574828d9140e10278f55c6b0387",
+                   "Coffre-0.1.5.1-portable.zip":  "4ad99a8f460a51eceaf0a16ce42aded852e5ffdc43eb5372f43d37965d9d332a"
                }
 }

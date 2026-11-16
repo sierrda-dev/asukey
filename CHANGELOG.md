@@ -1,5 +1,18 @@
 # Journal des versions
 
+## 0.1.5.1 — 16 novembre 2026
+
+**Apparence personnalisable**
+- **Nouvelle icône** : disque bleu-violet avec trou de serrure, entouré d'un anneau, sur Windows (barre des tâches, menu Démarrer, Store), dans l'extension de navigateur et sur Mac. Aux petites tailles, seul le disque est gardé pour rester net.
+- Nouvelle rubrique **Réglages › Apparence** : thème (comme Windows, clair, sombre), densité **Confortable** ou **Compact** (lignes de la liste et de la barre latérale plus serrées), taille de l'interface de 80 à 150 % (boutons − et +, ou Ctrl+= et Ctrl+−, Ctrl+0 pour revenir à 100 %), et « Rétablir les valeurs par défaut ». Tout s'applique immédiatement, sans redémarrer.
+- **Barre latérale** : choisis les rubriques toujours affichées (Catégories, Tags) et, en option, le nombre d'éléments à côté de chaque rubrique.
+- **Couleur de la barre latérale** : neuf teintes (Brume, Lavande, Menthe, Sable, Pétale, Ardoise, Nuit, Prune, Forêt) ou une couleur personnalisée ; le texte passe en clair ou en foncé selon la couleur.
+- **Couleur d'accent** : bleu de Coffre ou huit autres couleurs, ou une couleur personnalisée, pour les boutons, la sélection et les liens.
+- **Installer l'extension de navigateur depuis Coffre** : menu ⋯ › « Installer l'extension de navigateur… » (ou Réglages › Navigateur). Choisis Chrome, Edge, Brave ou Firefox : Coffre prépare l'extension (livrée avec l'application), copie le chemin, ouvre la page des extensions du navigateur, affiche les deux derniers clics et le code d'association dans la même fenêtre. L'extension installée est actualisée toute seule à chaque mise à jour de Coffre.
+- **Quitter Coffre** depuis le menu ⋯ de la barre latérale et le menu du compte (Ctrl+Q) : le coffre est verrouillé puis l'application se ferme.
+- La rubrique **Développeur** est retirée de la barre latérale, des réglages et de la Sentinelle (les fonctions restent dans le code pour plus tard).
+- Pièce jointe sur n'importe quel élément : menu ⋮ de la fiche › « Ajouter une pièce jointe… ».
+
 ## 0.1.5 — 16 novembre 2026
 
 **Sécurité des données**
@@ -16,7 +29,6 @@
 - Sérialisation du coffre générée à la compilation, vérifiée octet pour octet identique à l'ancienne : prépare la compilation native.
 - Icônes refaites à toutes les tailles demandées par Windows et le Store (barre des tâches, menu Démarrer, écran de démarrage), nettes de 16 à 256 pixels.
 - **Microsoft Store** : `tools\store.ps1` produit le paquet à déposer dans l'Espace partenaires (identité du Store, sans l'autorisation de mise à jour automatique). Installé depuis le Store, Coffre ne vérifie plus ses mises à jour lui-même : « Rechercher une mise à jour » ouvre la page du Store. Fiche du Store prête dans docs/STORE.md, politique de confidentialité publiée sur le site (confidentialite.html).
-- Pièce jointe sur n'importe quel élément (et plus seulement les documents) : menu ⋮ de la fiche › « Ajouter une pièce jointe… ».
 - En-têtes de la liste et de la fiche alignés : « Toutes les catégories », le filtre et le tri sont à la même hauteur que le propriétaire et le coffre de l'élément ouvert.
 - Code : réglages et barre latérale découpés en plusieurs fichiers, sans changement de comportement.
 

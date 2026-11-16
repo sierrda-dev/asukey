@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coffre 0.1.5 — gestionnaire de mots de passe pour Windows 11 et macOS</title>
+<title>Coffre 0.1.5.1 — gestionnaire de mots de passe pour Windows 11 et macOS</title>
 <style>
   :root { color-scheme: light dark; --accent: #1a6bd8; }
   body { font: 16px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 20px; }
@@ -14,10 +14,10 @@
 </style>
 </head>
 <body>
-<h1>Coffre 0.1.5</h1>
+<h1>Coffre 0.1.5.1</h1>
 <p class="sub">Gestionnaire de mots de passe local pour Windows 11 et macOS, chiffré de bout en bout, sans compte en ligne.</p>
-<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5/Coffre-0.1.5-kit.zip">Télécharger le kit d'installation</a>
-<a class="btn alt" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5/Coffre-0.1.5-portable.zip">Version portable</a>
+<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.1/Coffre-0.1.5.1-kit.zip">Télécharger le kit d'installation</a>
+<a class="btn alt" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.1/Coffre-0.1.5.1-portable.zip">Version portable</a>
 
 
 <section>
@@ -34,28 +34,15 @@
 <section>
 <h2>Nouveautés</h2>
 <ul>
-<li>Mises &#224; jour sign&#233;es : l&#39;annonce de chaque version (version.json) est sign&#233;e avec une cl&#233; gard&#233;e sur le PC de publication, et contient l&#39;empreinte de chaque…</li>
-<li>Protection contre les anciennes copies : chaque appareil retient la version la plus r&#233;cente de ton coffre qu&#39;il a vue. Si le fichier est remplac&#233; par une cop…</li>
-<li>Mot de passe ma&#238;tre mieux prot&#233;g&#233; : la d&#233;rivation Argon2id utilise jusqu&#39;&#224; 256 Mio de m&#233;moire (au lieu de 64), selon ce que ton appareil calcule en environ u…</li>
-<li>Fichiers endommag&#233;s ou pi&#233;g&#233;s : des milliers de fichiers de coffre, contenus, imports (CSV, Bitwarden, 1Password, KeePass) et annonces de version modifi&#233;s au…</li>
-<li>La Sentinelle est environ six fois plus rapide sur un gros coffre (5 000 &#233;l&#233;ments : 0,6 s → 0,1 s, puis quelques centi&#232;mes de seconde) : le catalogue des ser…</li>
-<li>La liste ne se recr&#233;e plus quand seul le contenu d&#39;&#233;l&#233;ments change (favori, renommage sans changement d&#39;ordre) : seules les lignes visibles sont redessin&#233;es.</li>
-<li>Les rubriques des r&#233;glages d&#233;j&#224; ouvertes s&#39;affichent sans &#234;tre reconstruites.</li>
-<li>D&#233;marrage plus rapide : l&#39;application est pr&#233;compil&#233;e (ReadyToRun) dans le paquet.</li>
-<li>S&#233;rialisation du coffre g&#233;n&#233;r&#233;e &#224; la compilation, v&#233;rifi&#233;e octet pour octet identique &#224; l&#39;ancienne : pr&#233;pare la compilation native.</li>
-<li>Ic&#244;nes refaites &#224; toutes les tailles demand&#233;es par Windows et le Store (barre des t&#226;ches, menu D&#233;marrer, &#233;cran de d&#233;marrage), nettes de 16 &#224; 256 pixels.</li>
-<li>Microsoft Store : tools\store.ps1 produit le paquet &#224; d&#233;poser dans l&#39;Espace partenaires (identit&#233; du Store, sans l&#39;autorisation de mise &#224; jour automatique).…</li>
-<li>Pi&#232;ce jointe sur n&#39;importe quel &#233;l&#233;ment (et plus seulement les documents) : menu ⋮ de la fiche › &#171; Ajouter une pi&#232;ce jointe… &#187;.</li>
-<li>En-t&#234;tes de la liste et de la fiche align&#233;s : &#171; Toutes les cat&#233;gories &#187;, le filtre et le tri sont &#224; la m&#234;me hauteur que le propri&#233;taire et le coffre de l&#39;&#233;l&#233;…</li>
-<li>Code : r&#233;glages et barre lat&#233;rale d&#233;coup&#233;s en plusieurs fichiers, sans changement de comportement.</li>
-<li>Application Mac native (SwiftUI, macOS 13 ou plus r&#233;cent, Apple Silicon et Intel), &#224; t&#233;l&#233;charger en Coffre-0.1.5-mac.dmg.</li>
-<li>Ouvre le m&#234;me fichier .vault que la version Windows, avec le m&#234;me mot de passe ma&#238;tre (et la m&#234;me cl&#233; secr&#232;te si tu en as une) : place-le dans iCloud Drive,…</li>
-<li>&#201;cran de verrouillage identique dans l&#39;esprit : ta photo de profil en carr&#233; arrondi, anneau anim&#233; pendant la v&#233;rification, Touch ID en bouton principal, jama…</li>
-<li>Barre lat&#233;rale (tous les &#233;l&#233;ments, favoris, cat&#233;gories, coffres, tags, Sentinelle, corbeille), recherche, fiche avec copie au clic, code 2FA qui d&#233;file, cr&#233;a…</li>
-<li>Sentinelle : mots de passe faibles, r&#233;utilis&#233;s, comptes en double, score ; v&#233;rification facultative des mots de passe compromis (Have I Been Pwned, k-anonyma…</li>
-<li>Presse-papiers effac&#233; automatiquement, secrets marqu&#233;s confidentiels ; verrouillage automatique et &#224; la mise en veille.</li>
-<li>Coffre sur Mac v&#233;rifie lui aussi les mises &#224; jour sur le site.</li>
-<li>Pas encore sur Mac : remplissage dans le navigateur, passkeys, pi&#232;ces jointes, coffres partag&#233;s, envois, Mode voyage, import et export. Ces donn&#233;es sont cons…</li>
+<li>Nouvelle ic&#244;ne : disque bleu-violet avec trou de serrure, entour&#233; d&#39;un anneau, sur Windows (barre des t&#226;ches, menu D&#233;marrer, Store), dans l&#39;extension de navi…</li>
+<li>Nouvelle rubrique R&#233;glages › Apparence : th&#232;me (comme Windows, clair, sombre), densit&#233; Confortable ou Compact (lignes de la liste et de la barre lat&#233;rale plu…</li>
+<li>Barre lat&#233;rale : choisis les rubriques toujours affich&#233;es (Cat&#233;gories, Tags) et, en option, le nombre d&#39;&#233;l&#233;ments &#224; c&#244;t&#233; de chaque rubrique.</li>
+<li>Couleur de la barre lat&#233;rale : neuf teintes (Brume, Lavande, Menthe, Sable, P&#233;tale, Ardoise, Nuit, Prune, For&#234;t) ou une couleur personnalis&#233;e ; le texte pass…</li>
+<li>Couleur d&#39;accent : bleu de Coffre ou huit autres couleurs, ou une couleur personnalis&#233;e, pour les boutons, la s&#233;lection et les liens.</li>
+<li>Installer l&#39;extension de navigateur depuis Coffre : menu ⋯ › &#171; Installer l&#39;extension de navigateur… &#187; (ou R&#233;glages › Navigateur). Choisis Chrome, Edge, Brave…</li>
+<li>Quitter Coffre depuis le menu ⋯ de la barre lat&#233;rale et le menu du compte (Ctrl+Q) : le coffre est verrouill&#233; puis l&#39;application se ferme.</li>
+<li>La rubrique D&#233;veloppeur est retir&#233;e de la barre lat&#233;rale, des r&#233;glages et de la Sentinelle (les fonctions restent dans le code pour plus tard).</li>
+<li>Pi&#232;ce jointe sur n&#39;importe quel &#233;l&#233;ment : menu ⋮ de la fiche › &#171; Ajouter une pi&#232;ce jointe… &#187;.</li>
 </ul>
 </section>
 
