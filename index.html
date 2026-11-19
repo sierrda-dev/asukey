@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>asukey 0.1.5.1 — gestionnaire de mots de passe pour Windows 11 et macOS</title>
+<title>asukey 0.1.5.2 — gestionnaire de mots de passe pour Windows 11</title>
 <style>
   :root { color-scheme: light dark; --accent: #1a6bd8; }
   body { font: 16px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 20px; }
@@ -14,10 +14,10 @@
 </style>
 </head>
 <body>
-<h1>asukey 0.1.5.1</h1>
-<p class="sub">Gestionnaire de mots de passe local pour Windows 11 et macOS, chiffré de bout en bout, sans compte en ligne.</p>
-<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.1/asukey-0.1.5.1-kit.zip">Télécharger le kit d'installation</a>
-<a class="btn alt" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.1/asukey-0.1.5.1-portable.zip">Version portable</a>
+<h1>asukey 0.1.5.2</h1>
+<p class="sub">Gestionnaire de mots de passe local pour Windows 11, chiffré de bout en bout, sans compte en ligne.</p>
+<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.2/asukey-0.1.5.2-kit.zip">Télécharger le kit d'installation</a>
+<a class="btn alt" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.5.2/asukey-0.1.5.2-portable.zip">Version portable</a>
 
 
 <section>
@@ -34,30 +34,26 @@
 <section>
 <h2>Nouveautés</h2>
 <ul>
-<li>Nouveau nom partout : fen&#234;tre, menu D&#233;marrer, barre des t&#226;ches, extension de navigateur, extension VS Code, application Mac et ligne de commande. La mise &#224; j…</li>
-<li>Rien ne bouge sur le disque : un coffre existant reste dans Documents\Coffre. Les nouvelles installations utilisent Documents\asukey\asukey.vault, et les nou…</li>
-<li>Ligne de commande : la commande s&#39;appelle asukey (asukey run, asukey read, asukey mcp…). L&#39;installateur du kit installe aussi coffre pour que tes scripts con…</li>
-<li>Les r&#233;f&#233;rences de secrets s&#39;&#233;crivent asukey://Coffre/&#201;l&#233;ment/champ ; les anciennes r&#233;f&#233;rences coffre://… restent reconnues partout (ligne de commande, fichie…</li>
-<li>Nouvelle ic&#244;ne : disque bleu-violet avec trou de serrure, entour&#233; d&#39;un anneau, sur Windows (barre des t&#226;ches, menu D&#233;marrer, Store), dans l&#39;extension de navi…</li>
-<li>Nouvelle rubrique R&#233;glages › Apparence : th&#232;me (comme Windows, clair, sombre), densit&#233; Confortable ou Compact (lignes de la liste et de la barre lat&#233;rale plu…</li>
-<li>Barre lat&#233;rale : choisis les rubriques toujours affich&#233;es (Cat&#233;gories, Tags) et, en option, le nombre d&#39;&#233;l&#233;ments &#224; c&#244;t&#233; de chaque rubrique.</li>
-<li>Couleur de la barre lat&#233;rale : neuf teintes (Brume, Lavande, Menthe, Sable, P&#233;tale, Ardoise, Nuit, Prune, For&#234;t) ou une couleur personnalis&#233;e ; le texte pass…</li>
-<li>Couleur d&#39;accent : bleu d&#39;asukey ou huit autres couleurs, ou une couleur personnalis&#233;e, pour les boutons, la s&#233;lection et les liens.</li>
-<li>Installer l&#39;extension de navigateur depuis asukey : menu ⋯ › &#171; Installer l&#39;extension de navigateur… &#187; (ou R&#233;glages › Navigateur). Choisis Chrome, Edge, Brave…</li>
-<li>Enregistrement automatique des identifiants, plus fiable : la bulle &#171; Enregistrer dans asukey ? &#187; appara&#238;t aussi pour les connexions en deux pages (l&#39;identif…</li>
-<li>Nouvelle fen&#234;tre de l&#39;extension : compte, recherche dans tout le coffre, g&#233;n&#233;rateur et bouton + en haut ; &#224; gauche les suggestions pour le site ouvert (ou to…</li>
-<li>Deuxi&#232;me appareil plus simple : au premier lancement, &#171; J&#39;utilise d&#233;j&#224; asukey sur un autre appareil &#187; cherche les coffres dans OneDrive, Dropbox, Google Driv…</li>
-<li>Connexion directe &#224; OneDrive, Google Drive et pCloud (R&#233;glages › Synchronisation › &#171; Se connecter… &#187;) : connexion au compte dans le navigateur, choix ou cr&#233;a…</li>
-<li>Via l&#39;application du service : pCloud Drive rejoint OneDrive, Dropbox, Google Drive et iCloud, et &#171; Choisir le dossier… &#187; permet de choisir ou cr&#233;er le sous-…</li>
-<li>Quitter asukey depuis le menu ⋯ de la barre lat&#233;rale et le menu du compte (Ctrl+Q) : le coffre est verrouill&#233; puis l&#39;application se ferme.</li>
-<li>La rubrique D&#233;veloppeur est retir&#233;e de la barre lat&#233;rale, des r&#233;glages et de la Sentinelle (les fonctions restent dans le code pour plus tard).</li>
-<li>Pi&#232;ce jointe sur n&#39;importe quel &#233;l&#233;ment : menu ⋮ de la fiche › &#171; Ajouter une pi&#232;ce jointe… &#187;.</li>
+<li>Nouvelle page Partage (barre lat&#233;rale) : une page d&#39;accueil explique le partage en trois &#233;tapes ; ensuite, chaque coffre partag&#233; y a sa carte avec les membre…</li>
+<li>Assistant &#171; Nouveau coffre partag&#233; &#187; : un mod&#232;le (Famille, Couple, &#201;quipe, Autre), un nom, puis l&#39;endroit o&#249; le ranger parmi les services d&#233;tect&#233;s (OneDrive,…</li>
+<li>Invitation en une &#233;tape : tu indiques un pr&#233;nom et ce que la personne pourra faire (ajouter et modifier, ou voir et copier). asukey d&#233;pose l&#39;invitation dans…</li>
+<li>&#171; J&#39;ai re&#231;u une invitation &#187; : asukey trouve tout seul les invitations dans tes dossiers synchronis&#233;s ; tu tapes le code (majuscules, tirets et accents ignor…</li>
+<li>Identit&#233; en emojis : chaque personne a une empreinte de six emojis (🐢 🍋 🚲 🌙 …) &#224; comparer de vive voix, plus simple que l&#39;empreinte hexad&#233;cimale (toujour…</li>
+<li>Le fichier partag&#233; se retrouve tout seul sur chaque ordinateur : asukey retient son emplacement dans le service (&#171; OneDrive › asukey › Partag&#233;s › Famille &#187;),…</li>
+<li>Partager un &#233;l&#233;ment : menu ⋯ de la fiche › &#171; Partager avec… &#187; : un coffre partag&#233; existant, ou &#171; Nouveau coffre partag&#233;… &#187; qui y place l&#39;&#233;l&#233;ment.</li>
+<li>Partager un coffre existant : clic droit sur le coffre › &#171; Partager ce coffre… &#187; (choix du service, puis invitation).</li>
+<li>Invitations limit&#233;es dans le temps (3 &#224; 30 jours) et annulables ; annuler change la cl&#233; du coffre. La cl&#233; du coffre contenue dans une invitation est chiffr&#233;e…</li>
+<li>Corrige asukey qui ne se lan&#231;ait plus (sans aucun message) apr&#232;s avoir choisi une couleur d&#39;accent dans R&#233;glages › Apparence.</li>
+<li>Une erreur de th&#232;me ou de couleur au lancement est ignor&#233;e et not&#233;e dans le journal, au lieu d&#39;emp&#234;cher l&#39;ouverture.</li>
+<li>Mode sans &#233;chec : si asukey n&#39;arrive pas &#224; d&#233;marrer deux fois de suite, l&#39;apparence est remise par d&#233;faut au lancement suivant, avec un message pour l&#39;expliq…</li>
+<li>Les r&#233;glages d&#39;apparence invalides (fichier modifi&#233; &#224; la main, par exemple) reviennent aux valeurs par d&#233;faut.</li>
+<li>Publication : chaque version est d&#39;abord lanc&#233;e automatiquement avec plusieurs r&#233;glages d&#39;apparence (dont les tiens) ; si elle ne d&#233;marre pas, rien n&#39;est pub…</li>
 </ul>
 </section>
 
 <section>
 <h2>Sécurité</h2>
-<p>Les paquets sont signés par le certificat <a href="Coffre.cer">Coffre.cer</a> (éditeur <code>CN=Erc</code>). Windows refuse toute mise à jour signée par un autre certificat. Ce site ne reçoit aucune donnée de ton coffre : asukey y lit seulement <a href="version.json">version.json</a>.</p>
+<p>Les paquets sont signés par le certificat <a href="Coffre.cer">Coffre.cer</a> (éditeur sierrda-dev, certificat <code>CN=Erc</code>). Windows refuse toute mise à jour signée par un autre certificat. Ce site ne reçoit aucune donnée de ton coffre : asukey y lit seulement <a href="version.json">version.json</a>.</p>
 </section>
 </body>
 </html>

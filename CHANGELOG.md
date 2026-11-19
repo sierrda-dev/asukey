@@ -1,15 +1,35 @@
 # Journal des versions
 
+## 0.1.5.2 — 19 novembre 2026
+
+**Partage : plus simple et plus convivial**
+- **Nouvelle page Partage** (barre latérale) : une page d'accueil explique le partage en trois étapes ; ensuite, chaque coffre partagé y a sa carte avec les membres (pastilles, rôle, empreinte en info-bulle), les invitations en cours, l'état du fichier (« À jour · dernière modification il y a 5 min », « Fichier introuvable » avec « Retrouver le fichier… ») et des boutons Inviter, Ouvrir, Gérer. En bas, l'**activité récente** : « Marie a modifié « Netflix » · il y a 2 h ».
+- **Assistant « Nouveau coffre partagé »** : un modèle (Famille, Couple, Équipe, Autre), un nom, puis l'endroit où le ranger parmi les services détectés (OneDrive, Google Drive, Dropbox, iCloud, pCloud — dans « asukey\Partagés ») ou un autre dossier, sans fenêtre « Enregistrer sous ». L'invitation suit directement.
+- **Invitation en une étape** : tu indiques un prénom et ce que la personne pourra faire (ajouter et modifier, ou voir et copier). asukey dépose l'invitation dans le dossier partagé et te donne un **code de six mots** (« tigre · velours · nuage… »), avec un message prêt à envoyer (copier, ou e-mail). Plus besoin d'échanger des codes « COFFRE1-… » : l'ancienne méthode reste disponible dans « Gérer » › avancé.
+- **« J'ai reçu une invitation »** : asukey trouve tout seul les invitations dans tes dossiers synchronisés ; tu tapes le code (majuscules, tirets et accents ignorés) et tu vois le coffre aussitôt, en lecture seule. La confirmation est automatique : dès que le propriétaire ouvre asukey, la personne devient membre (avec ses propres clés) et il reçoit « Marie a rejoint « Famille » ».
+- **Identité en emojis** : chaque personne a une empreinte de six emojis (🐢 🍋 🚲 🌙 …) à comparer de vive voix, plus simple que l'empreinte hexadécimale (toujours visible en info-bulle).
+- **Le fichier partagé se retrouve tout seul** sur chaque ordinateur : asukey retient son emplacement dans le service (« OneDrive › asukey › Partagés › Famille »), et le cherche aussi par son identifiant s'il a été renommé ou déplacé. Fini « Fichier partagé introuvable » sur un deuxième PC.
+- **Partager un élément** : menu ⋯ de la fiche › « Partager avec… » : un coffre partagé existant, ou « Nouveau coffre partagé… » qui y place l'élément.
+- **Partager un coffre existant** : clic droit sur le coffre › « Partager ce coffre… » (choix du service, puis invitation).
+- Invitations limitées dans le temps (3 à 30 jours) et annulables ; annuler change la clé du coffre. La clé du coffre contenue dans une invitation est chiffrée avec une clé tirée du code par Argon2id (64 Mio) : sans le code, le fichier d'invitation ne sert à rien.
+
+**Démarrage fiabilisé**
+- Corrige asukey qui ne se lançait plus (sans aucun message) après avoir choisi une couleur d'accent dans Réglages › Apparence.
+- Une erreur de thème ou de couleur au lancement est ignorée et notée dans le journal, au lieu d'empêcher l'ouverture.
+- Mode sans échec : si asukey n'arrive pas à démarrer deux fois de suite, l'apparence est remise par défaut au lancement suivant, avec un message pour l'expliquer.
+- Les réglages d'apparence invalides (fichier modifié à la main, par exemple) reviennent aux valeurs par défaut.
+- Publication : chaque version est d'abord lancée automatiquement avec plusieurs réglages d'apparence (dont les tiens) ; si elle ne démarre pas, rien n'est publié.
+
 ## 0.1.5.1 — 16 novembre 2026
 
 **Coffre s'appelle désormais asukey**
-- Nouveau nom partout : fenêtre, menu Démarrer, barre des tâches, extension de navigateur, extension VS Code, application Mac et ligne de commande. La mise à jour s'installe par-dessus l'ancienne version comme d'habitude : ton coffre, tes réglages, Windows Hello, la clé secrète et l'extension déjà associée sont conservés.
+- Nouveau nom partout : fenêtre, menu Démarrer, barre des tâches, extension de navigateur, extension VS Code et ligne de commande. La mise à jour s'installe par-dessus l'ancienne version comme d'habitude : ton coffre, tes réglages, Windows Hello, la clé secrète et l'extension déjà associée sont conservés.
 - Rien ne bouge sur le disque : un coffre existant reste dans `Documents\Coffre`. Les nouvelles installations utilisent `Documents\asukey\asukey.vault`, et les nouvelles sauvegardes s'appellent `asukey-sauvegarde-…` (les anciennes restent listées et restaurables).
 - Ligne de commande : la commande s'appelle `asukey` (`asukey run`, `asukey read`, `asukey mcp`…). L'installateur du kit installe aussi `coffre` pour que tes scripts continuent de marcher, et retire l'ancien dossier du PATH (si tu as configuré la signature Git, relance `asukey git setup`).
 - Les références de secrets s'écrivent `asukey://Coffre/Élément/champ` ; les anciennes références `coffre://…` restent reconnues partout (ligne de commande, fichiers .env, modèles, extension VS Code).
 
 **Apparence personnalisable**
-- **Nouvelle icône** : disque bleu-violet avec trou de serrure, entouré d'un anneau, sur Windows (barre des tâches, menu Démarrer, Store), dans l'extension de navigateur et sur Mac. Aux petites tailles, seul le disque est gardé pour rester net.
+- **Nouvelle icône** : disque bleu-violet avec trou de serrure, entouré d'un anneau, sur Windows (barre des tâches, menu Démarrer, Store) et dans l'extension de navigateur. Aux petites tailles, seul le disque est gardé pour rester net.
 - Nouvelle rubrique **Réglages › Apparence** : thème (comme Windows, clair, sombre), densité **Confortable** ou **Compact** (lignes de la liste et de la barre latérale plus serrées), taille de l'interface de 80 à 150 % (boutons − et +, ou Ctrl+= et Ctrl+−, Ctrl+0 pour revenir à 100 %), et « Rétablir les valeurs par défaut ». Tout s'applique immédiatement, sans redémarrer.
 - **Barre latérale** : choisis les rubriques toujours affichées (Catégories, Tags) et, en option, le nombre d'éléments à côté de chaque rubrique.
 - **Couleur de la barre latérale** : neuf teintes (Brume, Lavande, Menthe, Sable, Pétale, Ardoise, Nuit, Prune, Forêt) ou une couleur personnalisée ; le texte passe en clair ou en foncé selon la couleur.
@@ -27,7 +47,7 @@
 ## 0.1.5 — 16 novembre 2026
 
 **Sécurité des données**
-- **Mises à jour signées** : l'annonce de chaque version (version.json) est signée avec une clé gardée sur le PC de publication, et contient l'empreinte de chaque fichier publié. Coffre refuse toute mise à jour dont la signature ne correspond pas : un compte GitHub piraté ne suffirait plus à diffuser un faux Coffre. Sur Mac, le fichier téléchargé est en plus vérifié avant d'être ouvert.
+- **Mises à jour signées** : l'annonce de chaque version (version.json) est signée avec une clé gardée sur le PC de publication, et contient l'empreinte de chaque fichier publié. Coffre refuse toute mise à jour dont la signature ne correspond pas : un compte GitHub piraté ne suffirait plus à diffuser un faux Coffre.
 - **Protection contre les anciennes copies** : chaque appareil retient la version la plus récente de ton coffre qu'il a vue. Si le fichier est remplacé par une copie plus ancienne (dossier synchronisé compromis, historique de OneDrive…), Coffre prévient et ne l'ouvre qu'avec ton accord. Une ancienne copie ne peut plus remettre en place un ancien mot de passe maître lors de la synchronisation. Restaurer une sauvegarde depuis les réglages ne déclenche pas l'alerte.
 - **Mot de passe maître mieux protégé** : la dérivation Argon2id utilise jusqu'à 256 Mio de mémoire (au lieu de 64), selon ce que ton appareil calcule en environ une seconde. Un vol du fichier coûte jusqu'à quatre fois plus cher à attaquer. Ton coffre est mis à niveau tout seul au prochain déverrouillage par mot de passe ; Windows Hello, Touch ID, la clé secrète et la clé de récupération continuent de fonctionner, et les autres appareils suivent automatiquement.
 - **Fichiers endommagés ou piégés** : des milliers de fichiers de coffre, contenus, imports (CSV, Bitwarden, 1Password, KeePass) et annonces de version modifiés au hasard sont testés à chaque version. Les cas trouvés (base64 invalide, valeurs nulles, types inattendus) donnent maintenant un message clair au lieu d'une erreur imprévue.
@@ -42,16 +62,6 @@
 - **Microsoft Store** : `tools\store.ps1` produit le paquet à déposer dans l'Espace partenaires (identité du Store, sans l'autorisation de mise à jour automatique). Installé depuis le Store, Coffre ne vérifie plus ses mises à jour lui-même : « Rechercher une mise à jour » ouvre la page du Store. Fiche du Store prête dans docs/STORE.md, politique de confidentialité publiée sur le site (confidentialite.html).
 - En-têtes de la liste et de la fiche alignés : « Toutes les catégories », le filtre et le tri sont à la même hauteur que le propriétaire et le coffre de l'élément ouvert.
 - Code : réglages et barre latérale découpés en plusieurs fichiers, sans changement de comportement.
-
-**Coffre pour macOS (première version)**
-- Application Mac native (SwiftUI, macOS 13 ou plus récent, Apple Silicon et Intel), à télécharger en **Coffre-0.1.5-mac.dmg**.
-- Ouvre le même fichier `.vault` que la version Windows, avec le même mot de passe maître (et la même clé secrète si tu en as une) : place-le dans iCloud Drive, OneDrive ou Dropbox. Les modifications faites sur le PC et sur le Mac sont fusionnées automatiquement, avec les mêmes règles que sur Windows.
-- Écran de verrouillage identique dans l'esprit : ta photo de profil en carré arrondi, anneau animé pendant la vérification, Touch ID en bouton principal, jamais ton nom.
-- Barre latérale (tous les éléments, favoris, catégories, coffres, tags, Sentinelle, corbeille), recherche, fiche avec copie au clic, code 2FA qui défile, création et modification des éléments avec le même générateur de mots de passe.
-- Sentinelle : mots de passe faibles, réutilisés, comptes en double, score ; vérification facultative des mots de passe compromis (Have I Been Pwned, k-anonymat), comme sur Windows.
-- Presse-papiers effacé automatiquement, secrets marqués confidentiels ; verrouillage automatique et à la mise en veille.
-- Coffre sur Mac vérifie lui aussi les mises à jour sur le site.
-- Pas encore sur Mac : remplissage dans le navigateur, passkeys, pièces jointes, coffres partagés, envois, Mode voyage, import et export. Ces données sont conservées intactes et restent utilisables depuis Windows.
 
 ## 0.1.4 — 13 novembre 2026
 
