@@ -11,14 +11,18 @@
                   "Écran de verrouillage : logo d\u0027asukey, Windows Hello et mot de passe dans une carte claire posée sur le fond translucide.",
                   "Logos des sites : les identifiants affichent le logo de leur site, téléchargé directement depuis le site lui-même (aucun service tiers, aucune donnée du coff…",
                   "Fiche : titres plus grands, libellés des champs en gris discret. Liste plus aérée (lignes plus hautes, textes plus grands) ; les logos des sites occupent tou…",
-                  "Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres)."
+                  "Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres).",
+                  "Comptes : en bas de la barre latérale, ta photo et ton nom ouvrent le menu du compte (gérer le compte, gérer les comptes, configurer un autre appareil, nouve…",
+                  "Nouvel écran Réglages › À propos : bandeau illustré aux couleurs d\u0027asukey, logo et version, mode d\u0027installation (kit, Microsoft Store), date de la dernière v…",
+                  "Un coffre dont le contenu déchiffré n\u0027est pas du texte valide est refusé à l\u0027ouverture (au lieu de s\u0027ouvrir puis d\u0027échouer à l\u0027enregistrement).",
+                  "Corrige l\u0027erreur « Aucun composant installé n\u0027a été détecté » après « Vérifier les fuites maintenant » (ou après avoir ignoré une alerte) dans la Sentinelle.",
+                  "La version portable (sans installation) n\u0027est plus publiée : une version GitHub contient le kit d\u0027installation et le paquet de mise à jour."
               ],
     "appinstaller":  "https://sierrda-dev.github.io/coffre/Coffre.appinstaller",
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "asukey-0.1.6-kit.zip":  "b8bf225c8791743d4ceaff17ea5d9956a0e66226487301f2a2cb17d6a09117d7",
-                   "asukey-0.1.6-portable.zip":  "69d031f1316718b5c08255f7dac295e51dfbb7b24a68b3156e4909f0052606f6",
-                   "Coffre_0.1.6_x64.msix":  "baf7af14951ce8089e2e37d1801db0244a5cb56d539fe23d9be721bfbc6f1867"
+                   "asukey-0.1.6-kit.zip":  "c942c0b35fc962a4a937b5847a474025a152edd1df50f5ec1cfe34dc8df19c2b",
+                   "Coffre_0.1.6_x64.msix":  "00027fdaacedd2e5a3a78ca7c0de5f4b964551a4fdafe75055e8ab0f23c30bab"
                }
 }
