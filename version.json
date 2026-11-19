@@ -1,28 +1,24 @@
 {
-    "version":  "0.1.5.2",
+    "version":  "0.1.6",
     "date":  "2026-11-19",
     "notes":  [
-                  "Nouvelle page Partage (barre latérale) : une page d\u0027accueil explique le partage en trois étapes ; ensuite, chaque coffre partagé y a sa carte avec les membre…",
-                  "Assistant « Nouveau coffre partagé » : un modèle (Famille, Couple, Équipe, Autre), un nom, puis l\u0027endroit où le ranger parmi les services détectés (OneDrive,…",
-                  "Invitation en une étape : tu indiques un prénom et ce que la personne pourra faire (ajouter et modifier, ou voir et copier). asukey dépose l\u0027invitation dans…",
-                  "« J\u0027ai reçu une invitation » : asukey trouve tout seul les invitations dans tes dossiers synchronisés ; tu tapes le code (majuscules, tirets et accents ignor…",
-                  "Identité en emojis : chaque personne a une empreinte de six emojis (🐢 🍋 🚲 🌙 …) à comparer de vive voix, plus simple que l\u0027empreinte hexadécimale (toujour…",
-                  "Le fichier partagé se retrouve tout seul sur chaque ordinateur : asukey retient son emplacement dans le service (« OneDrive › asukey › Partagés › Famille »),…",
-                  "Partager un élément : menu ⋯ de la fiche › « Partager avec… » : un coffre partagé existant, ou « Nouveau coffre partagé… » qui y place l\u0027élément.",
-                  "Partager un coffre existant : clic droit sur le coffre › « Partager ce coffre… » (choix du service, puis invitation).",
-                  "Invitations limitées dans le temps (3 à 30 jours) et annulables ; annuler change la clé du coffre. La clé du coffre contenue dans une invitation est chiffrée…",
-                  "Corrige asukey qui ne se lançait plus (sans aucun message) après avoir choisi une couleur d\u0027accent dans Réglages › Apparence.",
-                  "Une erreur de thème ou de couleur au lancement est ignorée et notée dans le journal, au lieu d\u0027empêcher l\u0027ouverture.",
-                  "Mode sans échec : si asukey n\u0027arrive pas à démarrer deux fois de suite, l\u0027apparence est remise par défaut au lancement suivant, avec un message pour l\u0027expliq…",
-                  "Les réglages d\u0027apparence invalides (fichier modifié à la main, par exemple) reviennent aux valeurs par défaut.",
-                  "Publication : chaque version est d\u0027abord lancée automatiquement avec plusieurs réglages d\u0027apparence (dont les tiens) ; si elle ne démarre pas, rien n\u0027est pub…"
+                  "Fenêtre transparente : la barre latérale et la barre du haut forment un seul bloc translucide (Acrylique : le bureau se voit, flouté, derrière la fenêtre) ;…",
+                  "Barre latérale de Windows 11 : rubriques à icônes simples, barre de la couleur d\u0027accent sur la rubrique active, sections « Coffres », « Catégories », « Tags…",
+                  "Recherche centrée dans la barre du haut, dans un encadré bien visible, loupe à gauche et raccourci « Ctrl+F » à droite. Raccourcis dans les info-bulles (Nouv…",
+                  "Arrondis de Windows 11 : 4 px pour les boutons, champs et listes, 8 px pour les cartes, bandeaux et fenêtres.",
+                  "Boutons de Windows 11 : bouton d\u0027accent plein pour l\u0027action principale (Nouvel élément, Modifier, Enregistrer…), boutons clairs à fin relief pour les autres.…",
+                  "Sélection : l\u0027élément sélectionné dans la liste a un fond discret et une petite barre de la couleur d\u0027accent (au lieu d\u0027un fond bleu plein).",
+                  "Écran de verrouillage : logo d\u0027asukey, Windows Hello et mot de passe dans une carte claire posée sur le fond translucide.",
+                  "Logos des sites : les identifiants affichent le logo de leur site, téléchargé directement depuis le site lui-même (aucun service tiers, aucune donnée du coff…",
+                  "Fiche : titres plus grands, libellés des champs en gris discret. Liste plus aérée (lignes plus hautes, textes plus grands) ; les logos des sites occupent tou…",
+                  "Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres)."
               ],
     "appinstaller":  "https://sierrda-dev.github.io/coffre/Coffre.appinstaller",
     "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "asukey-0.1.5.2-kit.zip":  "8808b695636678ccf4ef654c50ac10fb0162c05bb8af40523d4dde970e76d25b",
-                   "asukey-0.1.5.2-portable.zip":  "ca297d6318cbd9279f5795357dc4c8a5df86074b1200aafef2d97cc45fd94d09",
-                   "Coffre_0.1.5.2_x64.msix":  "e00ca500ee4521af4f2c43627093213f76f97c9c78f08a5a66ecccb821f3287f"
+                   "asukey-0.1.6-kit.zip":  "b8bf225c8791743d4ceaff17ea5d9956a0e66226487301f2a2cb17d6a09117d7",
+                   "asukey-0.1.6-portable.zip":  "69d031f1316718b5c08255f7dac295e51dfbb7b24a68b3156e4909f0052606f6",
+                   "Coffre_0.1.6_x64.msix":  "baf7af14951ce8089e2e37d1801db0244a5cb56d539fe23d9be721bfbc6f1867"
                }
 }

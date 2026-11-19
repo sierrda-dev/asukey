@@ -1,5 +1,19 @@
 # Journal des versions
 
+## 0.1.6 — en préparation
+
+**Nouveau look Windows 11 (Fluent)**
+- **Fenêtre transparente** : la barre latérale et la barre du haut forment un seul bloc translucide (Acrylique : le bureau se voit, flouté, derrière la fenêtre) ; la liste et la fiche sont posées sur une couche claire au coin arrondi. Réglages › Apparence › **Transparence** : Acrylique, Mica (teinte du fond d'écran) ou Aucune (fonds unis comme avant). Le mode sans échec coupe la transparence. Une couleur de barre latérale choisie devient une teinte translucide.
+- **Barre latérale de Windows 11** : rubriques à icônes simples, barre de la couleur d'accent sur la rubrique active, sections « Coffres », « Catégories », « Tags » en petit titre, catégories en petites tuiles colorées. Le **profil passe en bas** (« Profil et réglages », état de la synchronisation, roue dentée pour les réglages ; clic droit : nouveau coffre, partage, verrouiller, quitter).
+- **Recherche** centrée dans la barre du haut, dans un encadré bien visible, loupe à gauche et raccourci « Ctrl+F » à droite. Raccourcis dans les info-bulles (Nouvel élément : Ctrl+N, Aide : F1, nouveau) et dans les menus (Verrouiller : Ctrl+L, Quitter : Ctrl+Q).
+- **Arrondis de Windows 11** : 4 px pour les boutons, champs et listes, 8 px pour les cartes, bandeaux et fenêtres.
+- **Boutons de Windows 11** : bouton d'accent plein pour l'action principale (Nouvel élément, Modifier, Enregistrer…), boutons clairs à fin relief pour les autres. Le bleu d'asukey est aussi utilisé par les interrupteurs, cases et contours de focus quand aucune couleur d'accent n'est choisie.
+- **Sélection** : l'élément sélectionné dans la liste a un fond discret et une petite barre de la couleur d'accent (au lieu d'un fond bleu plein).
+- **Écran de verrouillage** : logo d'asukey, Windows Hello et mot de passe dans une carte claire posée sur le fond translucide.
+- **Logos des sites** : les identifiants affichent le logo de leur site, téléchargé directement depuis le site lui-même (aucun service tiers, aucune donnée du coffre envoyée), puis gardé sur l'ordinateur. Sans logo, une tuile de couleur avec l'initiale. Désactivable dans Réglages › Apparence › Logos des sites ; jamais pour les adresses locales (localhost, adresses IP, NAS…).
+- Fiche : titres plus grands, libellés des champs en gris discret. Liste plus aérée (lignes plus hautes, textes plus grands) ; les logos des sites occupent toute la tuile.
+- Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres).
+
 ## 0.1.5.2 — 19 novembre 2026
 
 **Partage : plus simple et plus convivial**

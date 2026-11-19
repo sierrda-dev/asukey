@@ -2,35 +2,29 @@
 
 Gestionnaire de mots de passe **local** pour Windows 11, chiffré de bout en bout, sans compte en ligne.
 
-**Dernière version : 0.1.5.2** (19 novembre 2026)
+**Dernière version : 0.1.6** (19 novembre 2026)
 
 - **Télécharger** : [https://sierrda-dev.github.io/coffre](https://sierrda-dev.github.io/coffre) (kit d'installation et version portable)
 - **Déjà installé** (0.1.2 ou plus récent) : asukey propose les mises à jour tout seul.
 - **Toutes les versions** : [Releases](https://github.com/sierrda-dev/coffre/releases) · [Journal des versions](CHANGELOG.md)
 
-## Nouveautés de la 0.1.5.2
+## Nouveautés de la 0.1.6
 
-**Partage : plus simple et plus convivial**
-- **Nouvelle page Partage** (barre latérale) : une page d'accueil explique le partage en trois étapes ; ensuite, chaque coffre partagé y a sa carte avec les membres (pastilles, rôle, empreinte en info-bulle), les invitations en cours, l'état du fichier (« À jour · dernière modification il y a 5 min », « Fichier introuvable » avec « Retrouver le fichier… ») et des boutons Inviter, Ouvrir, Gérer. En bas, l'**activité récente** : « Marie a modifié « Netflix » · il y a 2 h ».
-- **Assistant « Nouveau coffre partagé »** : un modèle (Famille, Couple, Équipe, Autre), un nom, puis l'endroit où le ranger parmi les services détectés (OneDrive, Google Drive, Dropbox, iCloud, pCloud — dans « asukey\Partagés ») ou un autre dossier, sans fenêtre « Enregistrer sous ». L'invitation suit directement.
-- **Invitation en une étape** : tu indiques un prénom et ce que la personne pourra faire (ajouter et modifier, ou voir et copier). asukey dépose l'invitation dans le dossier partagé et te donne un **code de six mots** (« tigre · velours · nuage… »), avec un message prêt à envoyer (copier, ou e-mail). Plus besoin d'échanger des codes « COFFRE1-… » : l'ancienne méthode reste disponible dans « Gérer » › avancé.
-- **« J'ai reçu une invitation »** : asukey trouve tout seul les invitations dans tes dossiers synchronisés ; tu tapes le code (majuscules, tirets et accents ignorés) et tu vois le coffre aussitôt, en lecture seule. La confirmation est automatique : dès que le propriétaire ouvre asukey, la personne devient membre (avec ses propres clés) et il reçoit « Marie a rejoint « Famille » ».
-- **Identité en emojis** : chaque personne a une empreinte de six emojis (🐢 🍋 🚲 🌙 …) à comparer de vive voix, plus simple que l'empreinte hexadécimale (toujours visible en info-bulle).
-- **Le fichier partagé se retrouve tout seul** sur chaque ordinateur : asukey retient son emplacement dans le service (« OneDrive › asukey › Partagés › Famille »), et le cherche aussi par son identifiant s'il a été renommé ou déplacé. Fini « Fichier partagé introuvable » sur un deuxième PC.
-- **Partager un élément** : menu ⋯ de la fiche › « Partager avec… » : un coffre partagé existant, ou « Nouveau coffre partagé… » qui y place l'élément.
-- **Partager un coffre existant** : clic droit sur le coffre › « Partager ce coffre… » (choix du service, puis invitation).
-- Invitations limitées dans le temps (3 à 30 jours) et annulables ; annuler change la clé du coffre. La clé du coffre contenue dans une invitation est chiffrée avec une clé tirée du code par Argon2id (64 Mio) : sans le code, le fichier d'invitation ne sert à rien.
-
-**Démarrage fiabilisé**
-- Corrige asukey qui ne se lançait plus (sans aucun message) après avoir choisi une couleur d'accent dans Réglages › Apparence.
-- Une erreur de thème ou de couleur au lancement est ignorée et notée dans le journal, au lieu d'empêcher l'ouverture.
-- Mode sans échec : si asukey n'arrive pas à démarrer deux fois de suite, l'apparence est remise par défaut au lancement suivant, avec un message pour l'expliquer.
-- Les réglages d'apparence invalides (fichier modifié à la main, par exemple) reviennent aux valeurs par défaut.
-- Publication : chaque version est d'abord lancée automatiquement avec plusieurs réglages d'apparence (dont les tiens) ; si elle ne démarre pas, rien n'est publié.
+**Nouveau look Windows 11 (Fluent)**
+- **Fenêtre transparente** : la barre latérale et la barre du haut forment un seul bloc translucide (Acrylique : le bureau se voit, flouté, derrière la fenêtre) ; la liste et la fiche sont posées sur une couche claire au coin arrondi. Réglages › Apparence › **Transparence** : Acrylique, Mica (teinte du fond d'écran) ou Aucune (fonds unis comme avant). Le mode sans échec coupe la transparence. Une couleur de barre latérale choisie devient une teinte translucide.
+- **Barre latérale de Windows 11** : rubriques à icônes simples, barre de la couleur d'accent sur la rubrique active, sections « Coffres », « Catégories », « Tags » en petit titre, catégories en petites tuiles colorées. Le **profil passe en bas** (« Profil et réglages », état de la synchronisation, roue dentée pour les réglages ; clic droit : nouveau coffre, partage, verrouiller, quitter).
+- **Recherche** centrée dans la barre du haut, dans un encadré bien visible, loupe à gauche et raccourci « Ctrl+F » à droite. Raccourcis dans les info-bulles (Nouvel élément : Ctrl+N, Aide : F1, nouveau) et dans les menus (Verrouiller : Ctrl+L, Quitter : Ctrl+Q).
+- **Arrondis de Windows 11** : 4 px pour les boutons, champs et listes, 8 px pour les cartes, bandeaux et fenêtres.
+- **Boutons de Windows 11** : bouton d'accent plein pour l'action principale (Nouvel élément, Modifier, Enregistrer…), boutons clairs à fin relief pour les autres. Le bleu d'asukey est aussi utilisé par les interrupteurs, cases et contours de focus quand aucune couleur d'accent n'est choisie.
+- **Sélection** : l'élément sélectionné dans la liste a un fond discret et une petite barre de la couleur d'accent (au lieu d'un fond bleu plein).
+- **Écran de verrouillage** : logo d'asukey, Windows Hello et mot de passe dans une carte claire posée sur le fond translucide.
+- **Logos des sites** : les identifiants affichent le logo de leur site, téléchargé directement depuis le site lui-même (aucun service tiers, aucune donnée du coffre envoyée), puis gardé sur l'ordinateur. Sans logo, une tuile de couleur avec l'initiale. Désactivable dans Réglages › Apparence › Logos des sites ; jamais pour les adresses locales (localhost, adresses IP, NAS…).
+- Fiche : titres plus grands, libellés des champs en gris discret. Liste plus aérée (lignes plus hautes, textes plus grands) ; les logos des sites occupent toute la tuile.
+- Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres).
 
 ## Installer
 
-1. Télécharge `asukey-0.1.5.2-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/coffre/releases/latest).
+1. Télécharge `asukey-0.1.6-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/coffre/releases/latest).
 2. Clic droit › **Extraire tout**, puis double-clic sur **Installer asukey**.
 3. Windows demande d'approuver l'éditeur d'asukey une seule fois par ordinateur.
 
