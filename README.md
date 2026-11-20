@@ -2,38 +2,48 @@
 
 Gestionnaire de mots de passe **local** pour Windows 11, chiffré de bout en bout, sans compte en ligne.
 
-**Dernière version : 0.1.6** (19 novembre 2026)
+**Dernière version : 0.1.6.1** (20 novembre 2026)
 
 - **Télécharger** : [https://sierrda-dev.github.io/coffre](https://sierrda-dev.github.io/coffre) (kit d'installation)
 - **Déjà installé** (0.1.2 ou plus récent) : asukey propose les mises à jour tout seul.
 - **Toutes les versions** : [Releases](https://github.com/sierrda-dev/coffre/releases) · [Journal des versions](CHANGELOG.md)
 
-## Nouveautés de la 0.1.6
+## Nouveautés de la 0.1.6.1
 
-**Nouveau look Windows 11 (Fluent)**
-- **Fenêtre transparente** : la barre latérale et la barre du haut forment un seul bloc translucide (Acrylique : le bureau se voit, flouté, derrière la fenêtre) ; la liste et la fiche sont posées sur une couche claire au coin arrondi. Réglages › Apparence › **Transparence** : Acrylique, Mica (teinte du fond d'écran) ou Aucune (fonds unis comme avant). Le mode sans échec coupe la transparence. Une couleur de barre latérale choisie devient une teinte translucide.
-- **Barre latérale de Windows 11** : rubriques à icônes simples, barre de la couleur d'accent sur la rubrique active, sections « Coffres », « Catégories », « Tags » en petit titre, catégories en petites tuiles colorées. Le **profil passe en bas** (« Profil et réglages », état de la synchronisation, roue dentée pour les réglages ; clic droit : nouveau coffre, partage, verrouiller, quitter).
-- **Recherche** centrée dans la barre du haut, dans un encadré bien visible, loupe à gauche et raccourci « Ctrl+F » à droite. Raccourcis dans les info-bulles (Nouvel élément : Ctrl+N, Aide : F1, nouveau) et dans les menus (Verrouiller : Ctrl+L, Quitter : Ctrl+Q).
-- **Arrondis de Windows 11** : 4 px pour les boutons, champs et listes, 8 px pour les cartes, bandeaux et fenêtres.
-- **Boutons de Windows 11** : bouton d'accent plein pour l'action principale (Nouvel élément, Modifier, Enregistrer…), boutons clairs à fin relief pour les autres. Le bleu d'asukey est aussi utilisé par les interrupteurs, cases et contours de focus quand aucune couleur d'accent n'est choisie.
-- **Sélection** : l'élément sélectionné dans la liste a un fond discret et une petite barre de la couleur d'accent (au lieu d'un fond bleu plein).
-- **Écran de verrouillage** : logo d'asukey, Windows Hello et mot de passe dans une carte claire posée sur le fond translucide.
-- **Logos des sites** : les identifiants affichent le logo de leur site, téléchargé directement depuis le site lui-même (aucun service tiers, aucune donnée du coffre envoyée), puis gardé sur l'ordinateur. Sans logo, une tuile de couleur avec l'initiale. Désactivable dans Réglages › Apparence › Logos des sites ; jamais pour les adresses locales (localhost, adresses IP, NAS…).
-- Fiche : titres plus grands, libellés des champs en gris discret. Liste plus aérée (lignes plus hautes, textes plus grands) ; les logos des sites occupent toute la tuile.
-- Prépare la publication sur le Microsoft Store (numéro de version à trois chiffres).
-- **Comptes** : en bas de la barre latérale, ta photo et ton nom ouvrent le menu du compte (gérer le compte, gérer les comptes, configurer un autre appareil, nouveau coffre, réglages, verrouiller, quitter).
-  - « **Comptes** » liste les coffres déjà ouverts sur cet ordinateur : passe de l'un à l'autre (asukey se verrouille et demande le mot de passe de l'autre coffre), ajoute un compte (coffre existant ou nouveau), retire un compte de la liste.
-  - « **Gérer le compte** » : photo, prénom, nom, **adresse e-mail** (nouveau) et téléphone ; connexion et récupération (mot de passe maître, Windows Hello, clé secrète, kit d'urgence) ; appareils et synchronisation. La rubrique « Profil » des réglages disparaît.
-  - « **Configurer un autre appareil** » : les étapes pour ouvrir le même coffre sur un autre ordinateur ou sur iPhone, selon ta synchronisation.
-  - Raccourci **Ctrl+,** pour ouvrir les réglages.
-- **Nouvel écran Réglages › À propos** : bandeau illustré aux couleurs d'asukey, logo et version, mode d'installation (kit, Microsoft Store), date de la dernière vérification avec « Rechercher une mise à jour » et « Nouveautés de cette version », vérification quotidienne, puis conditions d'utilisation, politique de confidentialité, journal des versions et guide.
-- Un coffre dont le contenu déchiffré n'est pas du texte valide est refusé à l'ouverture (au lieu de s'ouvrir puis d'échouer à l'enregistrement).
-- Corrige l'erreur « Aucun composant installé n'a été détecté » après « Vérifier les fuites maintenant » (ou après avoir ignoré une alerte) dans la Sentinelle.
-- La version portable (sans installation) n'est plus publiée : une version GitHub contient le kit d'installation et le paquet de mise à jour.
+**Fiabilité et préparation au Microsoft Store**
+
+**Nouvel éditeur : sierrda-dev**
+- asukey est désormais signé au nom de **sierrda-dev** (certificat `CN=sierrda-dev`, paquet `sierrda-dev.asukey`). Pour Windows, c'est une nouvelle application : la mise à jour automatique depuis la 0.1.6 ne peut pas se faire, asukey te propose alors de télécharger le kit.
+- **« Installer asukey » s'occupe de tout** : il installe la nouvelle version, qui reprend au premier lancement les réglages de l'ancienne (comptes, apparence, navigateurs associés, clé secrète mémorisée, synchronisation, sauvegardes, logos), puis il retire l'ancienne. Ton coffre, dans Documents, n'est pas touché. Seul **Windows Hello est à réactiver** (Réglages › Sécurité) : sa clé appartenait à l'ancienne application, asukey te le rappelle.
+- La même reprise servira au passage à la version du Microsoft Store.
+
+**Un seul fichier à télécharger**
+- La version GitHub ne contient plus que le **kit** (`asukey-<version>-kit.zip`) : « Installer asukey », LISEZ-MOI et le paquet signé avec son certificat. Plus de version portable, plus d'extensions ni de guide en double : l'extension de navigateur et le guide sont dans l'application.
+- **Mises à jour** : asukey télécharge lui-même ce kit, vérifie son empreinte (signée par l'éditeur dans l'annonce de version : un zip modifié est refusé), en extrait le paquet et l'installe. Windows ne met plus à jour asukey en arrière-plan ; asukey vérifie à l'ouverture et une fois par jour, comme avant.
+
+**Remplissage plus sûr**
+- asukey utilise maintenant la **liste officielle des suffixes publics** (publicsuffix.org, plus de 10 000 règles) pour savoir si deux adresses sont le même site. Deux boutiques `….myshopify.com`, deux pages `….github.io`, deux sites `….co.uk` ou deux espaces `….s3.amazonaws.com` sont des sites différents : un identifiant de l'un n'est plus jamais proposé sur l'autre. Avant, seule une cinquantaine de cas étaient connus.
+- L'extension de navigateur applique la même règle pour les connexions en deux pages et l'enregistrement des identifiants (elle se contentait des deux derniers morceaux de l'adresse).
+- Sentinelle : un service connu en `.co.uk` ne couvre plus tous les sites `.co.uk` (2FA et passkeys disponibles).
+
+**Sécurité**
+- **Logos des sites** : asukey vérifie l'adresse réellement contactée, redirections comprises, et ne joint jamais ton réseau local (box, NAS, imprimante), même si un site y renvoie.
+- **Pont de l'extension** : 32 connexions simultanées au plus, et une requête doit arriver en 10 secondes ; un programme de l'ordinateur ne peut plus l'encombrer.
+- Les primitives cryptographiques écrites dans asukey (BLAKE2b, Argon2, X25519, Ed25519) sont désormais vérifiées par les vecteurs de **Project Wycheproof** (728 cas d'attaque connus) et par des centaines d'entrées aléatoires comparées à OpenSSL et hash-wasm, sur Windows comme sur Mac. Aucun écart trouvé.
+
+**Microsoft Store**
+- Politique de confidentialité complétée (synchronisation directe avec OneDrive, Google Drive et pCloud ; emplacement exact des réglages).
+- Revue de conformité des fonctions sensibles (docs/STORE.md) et notes prêtes pour la certification.
+- Dès que l'extension sera publiée dans les boutiques des navigateurs, « Installer l'extension » y mènera directement (plus de mode développeur).
+
+**Qualité**
+- 18 nouveaux tests du cœur (112 au total, avec plus de 1 300 vecteurs cryptographiques), plus un test de l'extension et deux du Mac ; la CI lance aussi les tests JavaScript et `swift test`.
+- `tools\tests.ps1` lance tous les tests en une commande (`-E2E` pour ceux dans Chrome).
+- Les numéros de version (application, extensions, VS Code, README) sont alignés automatiquement à la publication, et un test le vérifie.
 
 ## Installer
 
-1. Télécharge `asukey-0.1.6-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/coffre/releases/latest).
+1. Télécharge `asukey-0.1.6.1-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/coffre/releases/latest).
 2. Clic droit › **Extraire tout**, puis double-clic sur **Installer asukey**.
 3. Windows demande d'approuver l'éditeur d'asukey une seule fois par ordinateur.
 

@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Politique de confidentialité</h1>
-<p class="sub">asukey, gestionnaire de mots de passe pour Windows · Dernière mise à jour : 13 novembre 2026</p>
+<p class="sub">asukey, gestionnaire de mots de passe pour Windows · Dernière mise à jour : 20 novembre 2026</p>
 
 <p><b>Responsable</b> : sierrda-dev, éditeur d'asukey. Contact : <a href="https://github.com/sierrda-dev/coffre/issues">github.com/sierrda-dev/coffre/issues</a>.</p>
 
@@ -22,7 +22,7 @@
 <p>asukey fonctionne <b>entièrement sur ton ordinateur</b>. L'éditeur ne collecte, ne reçoit et ne stocke <b>aucune</b> donnée : ni mots de passe, ni profil, ni statistiques d'utilisation, ni rapports d'erreur.</p>
 <ul>
   <li>Le coffre (mots de passe, profil, photo, journal d'activité) est un fichier chiffré que tu enregistres où tu veux.</li>
-  <li>Les réglages, non secrets, sont dans <code>%LOCALAPPDATA%\asukey</code>. Si l'option est activée (Réglages › Sécurité), ils contiennent une copie de ta photo de profil pour l'écran de verrouillage ; jamais ton nom.</li>
+  <li>Les réglages, non secrets, sont dans <code>%LOCALAPPDATA%\Coffre</code> (dossier propre à l'application quand elle est installée par paquet ou par le Microsoft Store). Si l'option est activée (Réglages › Sécurité), ils contiennent une copie de ta photo de profil pour l'écran de verrouillage ; jamais ton nom.</li>
   <li>Un journal technique local (<code>coffre.log</code>) ne contient jamais de secret.</li>
 </ul>
 
@@ -33,6 +33,7 @@
   <tr><td>Mises à jour (version téléchargée sur ce site)</td><td>sierrda-dev.github.io</td><td>aucune donnée personnelle (adresse IP vue par GitHub)</td><td>une fois par jour, désactivable ; aucune dans la version du Microsoft Store</td></tr>
   <tr><td>Logos des sites</td><td>chaque site enregistré dans un identifiant, directement (sans service tiers)</td><td>aucune donnée du coffre : seulement la demande de la page d'accueil et de l'icône du site (adresse IP vue par le site)</td><td>activé par défaut, désactivable (Réglages › Apparence)</td></tr>
   <tr><td>Extension du navigateur</td><td>127.0.0.1 (ton ordinateur)</td><td>adresse du site visité, identifiants demandés</td><td>après association</td></tr>
+  <tr><td>Synchronisation directe avec OneDrive, Google Drive ou pCloud</td><td>le service que tu choisis (Microsoft, Google, pCloud)</td><td>le fichier du coffre, déjà chiffré (et ses pièces jointes chiffrées) : le service ne peut pas le lire. Les jetons de connexion restent sur ton ordinateur, protégés par Windows (DPAPI)</td><td>seulement si tu connectes un compte (Réglages › Synchronisation) ; déconnexion à tout moment</td></tr>
 </table>
 
 <h2>Partage de coffres et accès d'urgence</h2>
