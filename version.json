@@ -7,12 +7,13 @@
                   "Dans la version du Store, les messages qui parlaient du kit d\u0027installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, réins…",
                   "Les logos ne sont plus demandés pour les adresses réservées qui n\u0027existent pas sur Internet (.example, .test, .invalid, .home.arpa…).",
                   "L\u0027aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.",
+                  "Le dépôt GitHub s\u0027appelle maintenant asukey : le site des mises à jour devient https://sierrda-dev.github.io/asukey (versions, journal, conditions et confide…",
                   "Pour l\u0027éditeur : tools\\store.ps1 retient l\u0027identité du Store après la première fois, asukey demo crée un coffre de démonstration entièrement inventé pour les…"
               ],
-    "kit":  "https://github.com/sierrda-dev/coffre/releases/download/v0.1.7/asukey-0.1.7-kit.zip",
-    "download":  "https://github.com/sierrda-dev/coffre/releases/latest",
+    "kit":  "https://github.com/sierrda-dev/asukey/releases/download/v0.1.7/asukey-0.1.7-kit.zip",
+    "download":  "https://github.com/sierrda-dev/asukey/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "asukey-0.1.7-kit.zip":  "6eeaa2420e376e756b0017a029729fa9880f5792cbfbcbc7836c4861f550eecc"
+                   "asukey-0.1.7-kit.zip":  "2502a1c4b39c3fd4eae0d59f3bb486a421b8e0bbec57f3469427c0dc722e0172"
                }
 }

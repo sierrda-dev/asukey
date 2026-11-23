@@ -4,9 +4,9 @@ Gestionnaire de mots de passe **local** pour Windows 11, chiffré de bout en bou
 
 **Dernière version : 0.1.7** (23 novembre 2026)
 
-- **Télécharger** : [https://sierrda-dev.github.io/coffre](https://sierrda-dev.github.io/coffre) (kit d'installation)
+- **Télécharger** : [https://sierrda-dev.github.io/asukey](https://sierrda-dev.github.io/asukey) (kit d'installation)
 - **Déjà installé** (0.1.2 ou plus récent) : asukey propose les mises à jour tout seul.
-- **Toutes les versions** : [Releases](https://github.com/sierrda-dev/coffre/releases) · [Journal des versions](CHANGELOG.md)
+- **Toutes les versions** : [Releases](https://github.com/sierrda-dev/asukey/releases) · [Journal des versions](CHANGELOG.md)
 
 ## Nouveautés de la 0.1.7
 
@@ -16,16 +16,17 @@ Gestionnaire de mots de passe **local** pour Windows 11, chiffré de bout en bou
 - Dans la version du Store, les messages qui parlaient du kit d'installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, réinstaller l'extension).
 - Les logos ne sont plus demandés pour les adresses réservées qui n'existent pas sur Internet (`.example`, `.test`, `.invalid`, `.home.arpa`…).
 - L'aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.
+- Le dépôt GitHub s'appelle maintenant **asukey** : le site des mises à jour devient https://sierrda-dev.github.io/asukey (versions, journal, conditions et confidentialité). Les versions 0.1.6 et plus anciennes ne trouveront plus les mises à jour d'elles-mêmes : installe la 0.1.7 avec le kit.
 - Pour l'éditeur : `tools\store.ps1` retient l'identité du Store après la première fois, `asukey demo` crée un coffre de démonstration entièrement inventé pour les captures d'écran, et `docs/STORE.md` contient toute la soumission (fiches en français et en anglais, classification, remarques pour la certification).
 
 ## Installer
 
-1. Télécharge `asukey-0.1.7-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/coffre/releases/latest).
+1. Télécharge `asukey-0.1.7-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/asukey/releases/latest).
 2. Clic droit › **Extraire tout**, puis double-clic sur **Installer asukey**.
 3. Windows demande d'approuver l'éditeur d'asukey une seule fois par ordinateur.
 
 ## Sécurité
 
-Les paquets sont signés par le certificat [Coffre.cer](https://sierrda-dev.github.io/coffre/Coffre.cer) ; Windows refuse une mise à jour signée par un autre. Le site ne reçoit rien de ton coffre : l'application y lit seulement [version.json](https://sierrda-dev.github.io/coffre/version.json).
+Les paquets sont signés par le certificat [Coffre.cer](https://sierrda-dev.github.io/asukey/Coffre.cer) ; Windows refuse une mise à jour signée par un autre. Le site ne reçoit rien de ton coffre : l'application y lit seulement [version.json](https://sierrda-dev.github.io/asukey/version.json).
 
 Ce dépôt contient le site de téléchargement et des mises à jour. Il est publié par `tools/release.ps1 -Publish`.

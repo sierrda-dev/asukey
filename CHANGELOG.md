@@ -8,6 +8,7 @@
 - Dans la version du Store, les messages qui parlaient du kit d'installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, réinstaller l'extension).
 - Les logos ne sont plus demandés pour les adresses réservées qui n'existent pas sur Internet (`.example`, `.test`, `.invalid`, `.home.arpa`…).
 - L'aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.
+- Le dépôt GitHub s'appelle maintenant **asukey** : le site des mises à jour devient https://sierrda-dev.github.io/asukey (versions, journal, conditions et confidentialité). Les versions 0.1.6 et plus anciennes ne trouveront plus les mises à jour d'elles-mêmes : installe la 0.1.7 avec le kit.
 - Pour l'éditeur : `tools\store.ps1` retient l'identité du Store après la première fois, `asukey demo` crée un coffre de démonstration entièrement inventé pour les captures d'écran, et `docs/STORE.md` contient toute la soumission (fiches en français et en anglais, classification, remarques pour la certification).
 
 ## 0.1.6.1 — 20 novembre 2026
