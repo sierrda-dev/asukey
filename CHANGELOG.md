@@ -1,5 +1,15 @@
 # Journal des versions
 
+## 0.1.7 — 22 novembre 2026
+
+**Première version pour le Microsoft Store**
+- asukey arrive sur le **Microsoft Store** : installation en un clic, sans certificat à approuver, mises à jour par le Store. La version du kit sur GitHub reste disponible, avec les mêmes fonctions.
+- Passer du kit au Store est sans perte : au premier lancement, la version du Store reprend tes réglages, puis propose d'ouvrir la page de l'ancienne version dans les Paramètres de Windows pour la désinstaller. Ton coffre, dans Documents, ne bouge pas.
+- Dans la version du Store, les messages qui parlaient du kit d'installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, réinstaller l'extension).
+- Les logos ne sont plus demandés pour les adresses réservées qui n'existent pas sur Internet (`.example`, `.test`, `.invalid`, `.home.arpa`…).
+- L'aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.
+- Pour l'éditeur : `tools\store.ps1` retient l'identité du Store après la première fois, `asukey demo` crée un coffre de démonstration entièrement inventé pour les captures d'écran, et `docs/STORE.md` contient toute la soumission (fiches en français et en anglais, classification, remarques pour la certification).
+
 ## 0.1.6.1 — 20 novembre 2026
 
 **Fiabilité et préparation au Microsoft Store**

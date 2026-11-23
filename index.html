@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>asukey 0.1.6.1 — gestionnaire de mots de passe pour Windows 11</title>
+<title>asukey 0.1.7 — gestionnaire de mots de passe pour Windows 11</title>
 <style>
   :root { color-scheme: light dark; --accent: #1a6bd8; }
   body { font: 16px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 20px; }
@@ -14,9 +14,9 @@
 </style>
 </head>
 <body>
-<h1>asukey 0.1.6.1</h1>
+<h1>asukey 0.1.7</h1>
 <p class="sub">Gestionnaire de mots de passe local pour Windows 11, chiffré de bout en bout, sans compte en ligne.</p>
-<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.6.1/asukey-0.1.6.1-kit.zip">Télécharger le kit d'installation</a>
+<a class="btn" href="https://github.com/sierrda-dev/coffre/releases/download/v0.1.7/asukey-0.1.7-kit.zip">Télécharger le kit d'installation</a>
 
 
 <section>
@@ -33,23 +33,12 @@
 <section>
 <h2>Nouveautés</h2>
 <ul>
-<li>asukey est d&#233;sormais sign&#233; au nom de sierrda-dev (certificat CN=sierrda-dev, paquet sierrda-dev.asukey). Pour Windows, c&#39;est une nouvelle application : la mi…</li>
-<li>&#171; Installer asukey &#187; s&#39;occupe de tout : il installe la nouvelle version, qui reprend au premier lancement les r&#233;glages de l&#39;ancienne (comptes, apparence, nav…</li>
-<li>La m&#234;me reprise servira au passage &#224; la version du Microsoft Store.</li>
-<li>La version GitHub ne contient plus que le kit (asukey-&lt;version&gt;-kit.zip) : &#171; Installer asukey &#187;, LISEZ-MOI et le paquet sign&#233; avec son certificat. Plus de ve…</li>
-<li>Mises &#224; jour : asukey t&#233;l&#233;charge lui-m&#234;me ce kit, v&#233;rifie son empreinte (sign&#233;e par l&#39;&#233;diteur dans l&#39;annonce de version : un zip modifi&#233; est refus&#233;), en extr…</li>
-<li>asukey utilise maintenant la liste officielle des suffixes publics (publicsuffix.org, plus de 10 000 r&#232;gles) pour savoir si deux adresses sont le m&#234;me site.…</li>
-<li>L&#39;extension de navigateur applique la m&#234;me r&#232;gle pour les connexions en deux pages et l&#39;enregistrement des identifiants (elle se contentait des deux derniers…</li>
-<li>Sentinelle : un service connu en .co.uk ne couvre plus tous les sites .co.uk (2FA et passkeys disponibles).</li>
-<li>Logos des sites : asukey v&#233;rifie l&#39;adresse r&#233;ellement contact&#233;e, redirections comprises, et ne joint jamais ton r&#233;seau local (box, NAS, imprimante), m&#234;me si…</li>
-<li>Pont de l&#39;extension : 32 connexions simultan&#233;es au plus, et une requ&#234;te doit arriver en 10 secondes ; un programme de l&#39;ordinateur ne peut plus l&#39;encombrer.</li>
-<li>Les primitives cryptographiques &#233;crites dans asukey (BLAKE2b, Argon2, X25519, Ed25519) sont d&#233;sormais v&#233;rifi&#233;es par les vecteurs de Project Wycheproof (728 c…</li>
-<li>Politique de confidentialit&#233; compl&#233;t&#233;e (synchronisation directe avec OneDrive, Google Drive et pCloud ; emplacement exact des r&#233;glages).</li>
-<li>Revue de conformit&#233; des fonctions sensibles (docs/STORE.md) et notes pr&#234;tes pour la certification.</li>
-<li>D&#232;s que l&#39;extension sera publi&#233;e dans les boutiques des navigateurs, &#171; Installer l&#39;extension &#187; y m&#232;nera directement (plus de mode d&#233;veloppeur).</li>
-<li>18 nouveaux tests du cœur (112 au total, avec plus de 1 300 vecteurs cryptographiques), plus un test de l&#39;extension et deux du Mac ; la CI lance aussi les te…</li>
-<li>tools\tests.ps1 lance tous les tests en une commande (-E2E pour ceux dans Chrome).</li>
-<li>Les num&#233;ros de version (application, extensions, VS Code, README) sont align&#233;s automatiquement &#224; la publication, et un test le v&#233;rifie.</li>
+<li>asukey arrive sur le Microsoft Store : installation en un clic, sans certificat &#224; approuver, mises &#224; jour par le Store. La version du kit sur GitHub reste di…</li>
+<li>Passer du kit au Store est sans perte : au premier lancement, la version du Store reprend tes r&#233;glages, puis propose d&#39;ouvrir la page de l&#39;ancienne version d…</li>
+<li>Dans la version du Store, les messages qui parlaient du kit d&#39;installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, r&#233;ins…</li>
+<li>Les logos ne sont plus demand&#233;s pour les adresses r&#233;serv&#233;es qui n&#39;existent pas sur Internet (.example, .test, .invalid, .home.arpa…).</li>
+<li>L&#39;aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.</li>
+<li>Pour l&#39;&#233;diteur : tools\store.ps1 retient l&#39;identit&#233; du Store apr&#232;s la premi&#232;re fois, asukey demo cr&#233;e un coffre de d&#233;monstration enti&#232;rement invent&#233; pour les…</li>
 </ul>
 </section>
 
