@@ -1,5 +1,72 @@
 # Journal des versions
 
+## 0.1.9 — en cours
+
+**Projets renommés** (code source uniquement) : `asukey.sln`, `Asukey.App`, `Asukey.Core`, `Asukey.Cli`, `Asukey.Tests`, espaces de noms `Asukey.*`. L'application s'appelle désormais **asukey.exe** (Gestionnaire des tâches). Les données gardent leurs emplacements (`%LOCALAPPDATA%\Coffre`, clé Windows Hello, stratégie d'entreprise) : rien ne change pour les utilisateurs.
+
+**Publication GitHub** : le Microsoft Store est proposé en premier (site, README du dépôt, notes de version) dès que son identifiant est dans `packaging/microsoft-store.txt` ; la ligne de commande `asukey.exe` est jointe à chaque version (`asukey-<version>-ligne-de-commande.zip`), à côté du kit.
+
+**Design Windows 11 (Fluent 2)**
+- Couleurs de Fluent : texte principal et secondaire, couleurs d'état (succès, attention, erreur) de WinUI.
+- **Contraste élevé** de Windows respecté : couleurs du thème de contraste choisi, sans transparence.
+- Échelle typographique de Fluent partout (12 légende, 14 corps, 18, 20 sous-titre, 28 titre) et police Segoe UI Variable.
+- **Menu du clic droit dans la liste comme l'Explorateur de Windows 11** : actions rapides en icônes en haut (copier l'identifiant, le mot de passe, le code 2FA, favori, corbeille), le reste en liste dessous.
+- **Recherche avec suggestions**, comme dans Paramètres de Windows 11 : sous le champ du haut, les fiches récentes (champ vide) ou les éléments qui correspondent, les rubriques des réglages et « Créer un identifiant « … » ». Flèches pour choisir, Entrée pour ouvrir, Échap pour fermer ; la liste de gauche continue de se filtrer.
+- **Plus de blocages** : copie de référence et presse-papiers occupé, logos de sites lents ou sans adresse (15 s au plus par site, IPv6/IPv4 en alternance).
+- Animations de Windows 11 : la fiche glisse doucement à l'ouverture d'un élément, et les cartes des Réglages arrivent l'une après l'autre (coupées si Windows désactive les animations).
+- **Réglages comme l'application Paramètres de Windows 11** : une carte par réglage (espacées de 4 px), titres de groupe en semi-gras, titre de page en 28 px, navigation à icônes colorées avec la barre d'accent sur la rubrique ouverte.
+
+**Productivité**
+- **Sélection multiple et actions groupées** : Ctrl+clic, Maj+clic ou Ctrl+A dans la liste, puis favoris, tag, déplacement vers un coffre, archives ou corbeille en une fois (restauration et suppression définitive dans la corbeille). Annulable comme une action simple ; les éléments en lecture seule d'un coffre partagé ne sont pas touchés.
+- **Création assistée** : recherche des services sans tenir compte des accents ni des espaces (« credit agri »), catalogue élargi à plus de 180 services, logo du site dans les résultats ; une adresse tapée (« exemple.fr ») crée directement la connexion avec son titre. Dans l'éditeur, le titre se remplit d'après l'adresse, et un identifiant oublié est signalé avant l'enregistrement.
+- Extension : plus aucun `innerHTML` (fenêtres, icônes) ; l'outil de vérification de Mozilla ne signale plus aucun avertissement.
+- **Extension : asukey seul gestionnaire du navigateur** : un bandeau propose de couper l'enregistrement des mots de passe intégré à Chrome, Edge ou Firefox (et le remplissage des cartes et adresses dans Chrome et Edge), pour ne plus avoir deux propositions à chaque connexion. Autorisation facultative « privacy », demandée seulement à ce moment.
+
+**Synchronisation directe**
+- **OneDrive en connexion directe** : Réglages › Synchronisation › OneDrive › « Se connecter… » ; rien à installer, asukey envoie lui-même ton coffre chiffré (comptes Microsoft personnels et professionnels).
+- Connexion au compte corrigée : elle pouvait rester bloquée après l'autorisation dans le navigateur (le navigateur ouvre des connexions à l'avance sans rien y envoyer ; asukey attendait sur l'une d'elles).
+- Connexion aux services en IPv6 et IPv4 en parallèle : quand l'IPv6 de la box ou de l'opérateur ne mène nulle part, asukey passe aussitôt par l'IPv4 (l'échange du code avec Microsoft dépassait son délai).
+- Toute erreur de connexion s'affiche, et chaque étape est notée dans le journal.
+- Fenêtre « Synchroniser avec… » : le texte revient à la ligne au lieu d'être coupé.
+- Bouton « Se déconnecter de … » directement dans le bandeau et sur la ligne du service (avant : caché dans le menu ⋯) ; « Arrêter la synchronisation… » remet le coffre sur ce PC quand il passe par l'application d'un service.
+- Page Synchronisation revue : bandeau d'état (service, compte, dernière synchronisation), puis OneDrive et Google Drive. Dropbox, iCloud Drive et pCloud reviendront avec leur connexion directe (un service déjà utilisé reste affiché). Logo officiel du service si son fichier est déposé dans `Assets\Services`.
+
+## 0.1.8 — 23 novembre 2026
+
+**asukey, gestionnaire de passkeys de Windows 11**
+- asukey peut devenir le **gestionnaire de passkeys de Windows** : les sites, dans tous les navigateurs, et les applications enregistrent et utilisent leurs passkeys dans asukey, avec Windows Hello, sans l'extension. Réglages › **Passkeys**, puis choisis asukey dans Paramètres › Comptes › Passkeys › Options avancées. Nécessite Windows 11 avec la mise à jour de sécurité de novembre 2025 ou plus récente ; désactivé par défaut.
+- Coffre verrouillé : asukey s'ouvre et attend ton mot de passe ou Windows Hello, puis termine la connexion. Plusieurs coffres ou plusieurs comptes : asukey te demande lequel utiliser.
+- Les passkeys enregistrées par l'extension et par Windows sont les mêmes : une passkey créée d'un côté fonctionne de l'autre. Une passkey déjà enregistrée pour un compte n'est pas créée une seconde fois.
+- Windows propose tes passkeys dans les navigateurs grâce à une liste sans aucune clé privée (site, nom d'utilisateur), effacée si tu désactives l'option. Chaque demande de Windows est vérifiée par sa signature avant d'être traitée.
+
+**Extension : plus de formulaires remplis**
+- **Formulaires intégrés** : connexion ou paiement dans un cadre (iframe), par exemple un formulaire de carte bancaire hébergé par le prestataire de paiement. Un cadre ne reçoit que les identifiants de son propre site, et asukey indique quand le formulaire vient d'un autre site que la page. Les cadres minuscules (pixels espions) sont ignorés, et les passkeys restent réservées à la page principale.
+- **Connexion en plusieurs étapes sur la même page** : après avoir choisi l'identifiant à la première étape, le mot de passe puis le code 2FA sont remplis dès que leur champ apparaît (deux minutes au plus).
+- **Codes 2FA** : remplis aussi dans les codes découpés en cases d'un chiffre, détectés plus largement (code d'authentification, de sécurité…), et proposés sur la page suivante quand la connexion change de page.
+- « Remplir » dans la fenêtre de l'extension atteint aussi les formulaires intégrés.
+
+**Extension : prête pour les boutiques**
+- `tools\webstore.ps1` vérifie l'extension et crée les paquets du **Chrome Web Store**, d'**Edge Add-ons** et de **Firefox** ; `docs/WEBSTORE.md` contient les fiches en français et en anglais et les justifications des autorisations. La publication suivra.
+- Firefox : identifiant définitif et déclaration des données traitées, désormais obligatoire. Description raccourcie à la limite des boutiques.
+
+**Premier lancement**
+- Nouvelle étape **Bien démarrer** : importer ses mots de passe (1Password, Bitwarden, KeePass, navigateurs), choisir si asukey affiche les logos des sites (la seule connexion qu'il fait de lui-même), installer l'extension et, si Windows le permet, activer les passkeys de Windows.
+
+**Interface**
+- Menu ⋯ réorganisé : coffres et partage, extension, réglages, aide (guide, mises à jour, à propos), puis verrouiller et quitter ; les raccourcis s'affichent à droite.
+- Le bouton ⋯ d'une fiche a la même hauteur que « Modifier ».
+- Menu du compte réorganisé (compte, infos de remplissage, autre appareil, changer de compte, thème, verrouiller) ; thème clair, sombre ou comme Windows directement depuis ce menu.
+- Les flèches ← → désactivées n'ont plus de carré gris en thème clair.
+- Sentinelle : « Vérifier les fuites maintenant » annonce le résultat (aucune fuite, ou nombre d'éléments concernés).
+- Réglages › Synchronisation : une seule liste de services (OneDrive, Dropbox, Google Drive, iCloud Drive, pCloud), chacun avec sa meilleure méthode (connexion directe ou application installée) et les autres options dans son menu ⋯.
+- **Exporter un coffre** (clic droit sur un coffre) : copie chiffrée par un mot de passe d'export (`.asukey-export`, Argon2id et AES-256-GCM), à ranger où tu veux ou à rouvrir dans un autre asukey (Réglages › Importer › asukey) ; ou CSV non chiffré si la stratégie l'autorise. Les pièces jointes ne sont pas incluses.
+- La fenêtre est toujours en Acrylique (le choix Mica / sans transparence est retiré) ; le mode sans échec ne coupe plus la transparence. Windows affiche toujours un fond uni si les effets de transparence sont désactivés.
+
+**Fiabilité**
+- La liste des suffixes publics est mise à jour automatiquement à chaque version, pour l'application et l'extension (`tools\psl\update.ps1`, sans Python).
+- 14 nouveaux tests du cœur (127 au total) (gestionnaire de passkeys : requêtes CTAP2 et réponses vérifiées avec python-fido2, signatures de Windows, structures natives et objet COM ; extension et liste des suffixes) et 8 vérifications de bout en bout dans Chrome (cadres, étapes, codes en cases).
+- Code réorganisé : le coffre ouvert et la fenêtre principale sont découpés en fichiers plus courts.
+
 ## 0.1.7 — 22 novembre 2026
 
 **Première version pour le Microsoft Store**

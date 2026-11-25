@@ -24,6 +24,7 @@
   <li>Le coffre (mots de passe, profil, photo, journal d'activité) est un fichier chiffré que tu enregistres où tu veux.</li>
   <li>Les réglages, non secrets, sont dans <code>%LOCALAPPDATA%\Coffre</code> (dossier propre à l'application quand elle est installée par paquet ou par le Microsoft Store). Si l'option est activée (Réglages › Sécurité), ils contiennent une copie de ta photo de profil pour l'écran de verrouillage ; jamais ton nom.</li>
   <li>Un journal technique local (<code>coffre.log</code>) ne contient jamais de secret.</li>
+  <li>Gestionnaire de passkeys de Windows (0.1.8, désactivé par défaut) : si tu l'actives, asukey donne à Windows la liste de tes passkeys <strong>sans leur clé privée</strong> (site, identifiant de la passkey, nom d'utilisateur) pour qu'il te les propose dans les navigateurs. Cette liste reste sur l'ordinateur et Windows l'efface quand tu désactives l'option.</li>
 </ul>
 
 <h2>Connexions réseau</h2>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>asukey 0.1.7 — gestionnaire de mots de passe pour Windows 11</title>
+<title>asukey 0.1.9 — gestionnaire de mots de passe pour Windows 11</title>
 <style>
   :root { color-scheme: light dark; --accent: #1a6bd8; }
   body { font: 16px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 20px; }
@@ -14,9 +14,9 @@
 </style>
 </head>
 <body>
-<h1>asukey 0.1.7</h1>
+<h1>asukey 0.1.9</h1>
 <p class="sub">Gestionnaire de mots de passe local pour Windows 11, chiffré de bout en bout, sans compte en ligne.</p>
-<a class="btn" href="https://github.com/sierrda-dev/asukey/releases/download/v0.1.7/asukey-0.1.7-kit.zip">Télécharger le kit d'installation</a>
+<a class="btn" href="https://apps.microsoft.com/detail/9PNJ014KZP63">Installer depuis le Microsoft Store</a><a class="btn" href="https://github.com/sierrda-dev/asukey/releases/download/v0.1.9/asukey-0.1.9-kit.zip">Télécharger le kit d'installation</a>
 
 
 <section>
@@ -33,13 +33,25 @@
 <section>
 <h2>Nouveautés</h2>
 <ul>
-<li>asukey arrive sur le Microsoft Store : installation en un clic, sans certificat &#224; approuver, mises &#224; jour par le Store. La version du kit sur GitHub reste di…</li>
-<li>Passer du kit au Store est sans perte : au premier lancement, la version du Store reprend tes r&#233;glages, puis propose d&#39;ouvrir la page de l&#39;ancienne version d…</li>
-<li>Dans la version du Store, les messages qui parlaient du kit d&#39;installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, r&#233;ins…</li>
-<li>Les logos ne sont plus demand&#233;s pour les adresses r&#233;serv&#233;es qui n&#39;existent pas sur Internet (.example, .test, .invalid, .home.arpa…).</li>
-<li>L&#39;aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.</li>
-<li>Le d&#233;p&#244;t GitHub s&#39;appelle maintenant asukey : le site des mises &#224; jour devient https://sierrda-dev.github.io/asukey (versions, journal, conditions et confide…</li>
-<li>Pour l&#39;&#233;diteur : tools\store.ps1 retient l&#39;identit&#233; du Store apr&#232;s la premi&#232;re fois, asukey demo cr&#233;e un coffre de d&#233;monstration enti&#232;rement invent&#233; pour les…</li>
+<li>Couleurs de Fluent : texte principal et secondaire, couleurs d&#39;&#233;tat (succ&#232;s, attention, erreur) de WinUI.</li>
+<li>Contraste &#233;lev&#233; de Windows respect&#233; : couleurs du th&#232;me de contraste choisi, sans transparence.</li>
+<li>&#201;chelle typographique de Fluent partout (12 l&#233;gende, 14 corps, 18, 20 sous-titre, 28 titre) et police Segoe UI Variable.</li>
+<li>Menu du clic droit dans la liste comme l&#39;Explorateur de Windows 11 : actions rapides en ic&#244;nes en haut (copier l&#39;identifiant, le mot de passe, le code 2FA, f…</li>
+<li>Recherche avec suggestions, comme dans Param&#232;tres de Windows 11 : sous le champ du haut, les fiches r&#233;centes (champ vide) ou les &#233;l&#233;ments qui correspondent,…</li>
+<li>Plus de blocages : copie de r&#233;f&#233;rence et presse-papiers occup&#233;, logos de sites lents ou sans adresse (15 s au plus par site, IPv6/IPv4 en alternance).</li>
+<li>Animations de Windows 11 : la fiche glisse doucement &#224; l&#39;ouverture d&#39;un &#233;l&#233;ment, et les cartes des R&#233;glages arrivent l&#39;une apr&#232;s l&#39;autre (coup&#233;es si Windows…</li>
+<li>R&#233;glages comme l&#39;application Param&#232;tres de Windows 11 : une carte par r&#233;glage (espac&#233;es de 4 px), titres de groupe en semi-gras, titre de page en 28 px, navi…</li>
+<li>S&#233;lection multiple et actions group&#233;es : Ctrl+clic, Maj+clic ou Ctrl+A dans la liste, puis favoris, tag, d&#233;placement vers un coffre, archives ou corbeille en…</li>
+<li>Cr&#233;ation assist&#233;e : recherche des services sans tenir compte des accents ni des espaces (&#171; credit agri &#187;), catalogue &#233;largi &#224; plus de 180 services, logo du s…</li>
+<li>Extension : plus aucun innerHTML (fen&#234;tres, ic&#244;nes) ; l&#39;outil de v&#233;rification de Mozilla ne signale plus aucun avertissement.</li>
+<li>Extension : asukey seul gestionnaire du navigateur : un bandeau propose de couper l&#39;enregistrement des mots de passe int&#233;gr&#233; &#224; Chrome, Edge ou Firefox (et le…</li>
+<li>OneDrive en connexion directe : R&#233;glages › Synchronisation › OneDrive › &#171; Se connecter… &#187; ; rien &#224; installer, asukey envoie lui-m&#234;me ton coffre chiffr&#233; (comp…</li>
+<li>Connexion au compte corrig&#233;e : elle pouvait rester bloqu&#233;e apr&#232;s l&#39;autorisation dans le navigateur (le navigateur ouvre des connexions &#224; l&#39;avance sans rien y…</li>
+<li>Connexion aux services en IPv6 et IPv4 en parall&#232;le : quand l&#39;IPv6 de la box ou de l&#39;op&#233;rateur ne m&#232;ne nulle part, asukey passe aussit&#244;t par l&#39;IPv4 (l&#39;&#233;chang…</li>
+<li>Toute erreur de connexion s&#39;affiche, et chaque &#233;tape est not&#233;e dans le journal.</li>
+<li>Fen&#234;tre &#171; Synchroniser avec… &#187; : le texte revient &#224; la ligne au lieu d&#39;&#234;tre coup&#233;.</li>
+<li>Bouton &#171; Se d&#233;connecter de … &#187; directement dans le bandeau et sur la ligne du service (avant : cach&#233; dans le menu ⋯) ; &#171; Arr&#234;ter la synchronisation… &#187; remet…</li>
+<li>Page Synchronisation revue : bandeau d&#39;&#233;tat (service, compte, derni&#232;re synchronisation), puis OneDrive et Google Drive. Dropbox, iCloud Drive et pCloud revie…</li>
 </ul>
 </section>
 

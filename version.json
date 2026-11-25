@@ -1,19 +1,32 @@
 {
-    "version":  "0.1.7",
-    "date":  "2026-11-23",
+    "version":  "0.1.9",
+    "date":  "2026-11-25",
     "notes":  [
-                  "asukey arrive sur le Microsoft Store : installation en un clic, sans certificat à approuver, mises à jour par le Store. La version du kit sur GitHub reste di…",
-                  "Passer du kit au Store est sans perte : au premier lancement, la version du Store reprend tes réglages, puis propose d\u0027ouvrir la page de l\u0027ancienne version d…",
-                  "Dans la version du Store, les messages qui parlaient du kit d\u0027installation renvoient vers le Microsoft Store (installer asukey sur un autre ordinateur, réins…",
-                  "Les logos ne sont plus demandés pour les adresses réservées qui n\u0027existent pas sur Internet (.example, .test, .invalid, .home.arpa…).",
-                  "L\u0027aide pour ajouter un appareil ne mentionne plus de version de test pour iPhone.",
-                  "Le dépôt GitHub s\u0027appelle maintenant asukey : le site des mises à jour devient https://sierrda-dev.github.io/asukey (versions, journal, conditions et confide…",
-                  "Pour l\u0027éditeur : tools\\store.ps1 retient l\u0027identité du Store après la première fois, asukey demo crée un coffre de démonstration entièrement inventé pour les…"
+                  "Couleurs de Fluent : texte principal et secondaire, couleurs d\u0027état (succès, attention, erreur) de WinUI.",
+                  "Contraste élevé de Windows respecté : couleurs du thème de contraste choisi, sans transparence.",
+                  "Échelle typographique de Fluent partout (12 légende, 14 corps, 18, 20 sous-titre, 28 titre) et police Segoe UI Variable.",
+                  "Menu du clic droit dans la liste comme l\u0027Explorateur de Windows 11 : actions rapides en icônes en haut (copier l\u0027identifiant, le mot de passe, le code 2FA, f…",
+                  "Recherche avec suggestions, comme dans Paramètres de Windows 11 : sous le champ du haut, les fiches récentes (champ vide) ou les éléments qui correspondent,…",
+                  "Plus de blocages : copie de référence et presse-papiers occupé, logos de sites lents ou sans adresse (15 s au plus par site, IPv6/IPv4 en alternance).",
+                  "Animations de Windows 11 : la fiche glisse doucement à l\u0027ouverture d\u0027un élément, et les cartes des Réglages arrivent l\u0027une après l\u0027autre (coupées si Windows…",
+                  "Réglages comme l\u0027application Paramètres de Windows 11 : une carte par réglage (espacées de 4 px), titres de groupe en semi-gras, titre de page en 28 px, navi…",
+                  "Sélection multiple et actions groupées : Ctrl+clic, Maj+clic ou Ctrl+A dans la liste, puis favoris, tag, déplacement vers un coffre, archives ou corbeille en…",
+                  "Création assistée : recherche des services sans tenir compte des accents ni des espaces (« credit agri »), catalogue élargi à plus de 180 services, logo du s…",
+                  "Extension : plus aucun innerHTML (fenêtres, icônes) ; l\u0027outil de vérification de Mozilla ne signale plus aucun avertissement.",
+                  "Extension : asukey seul gestionnaire du navigateur : un bandeau propose de couper l\u0027enregistrement des mots de passe intégré à Chrome, Edge ou Firefox (et le…",
+                  "OneDrive en connexion directe : Réglages › Synchronisation › OneDrive › « Se connecter… » ; rien à installer, asukey envoie lui-même ton coffre chiffré (comp…",
+                  "Connexion au compte corrigée : elle pouvait rester bloquée après l\u0027autorisation dans le navigateur (le navigateur ouvre des connexions à l\u0027avance sans rien y…",
+                  "Connexion aux services en IPv6 et IPv4 en parallèle : quand l\u0027IPv6 de la box ou de l\u0027opérateur ne mène nulle part, asukey passe aussitôt par l\u0027IPv4 (l\u0027échang…",
+                  "Toute erreur de connexion s\u0027affiche, et chaque étape est notée dans le journal.",
+                  "Fenêtre « Synchroniser avec… » : le texte revient à la ligne au lieu d\u0027être coupé.",
+                  "Bouton « Se déconnecter de … » directement dans le bandeau et sur la ligne du service (avant : caché dans le menu ⋯) ; « Arrêter la synchronisation… » remet…",
+                  "Page Synchronisation revue : bandeau d\u0027état (service, compte, dernière synchronisation), puis OneDrive et Google Drive. Dropbox, iCloud Drive et pCloud revie…"
               ],
-    "kit":  "https://github.com/sierrda-dev/asukey/releases/download/v0.1.7/asukey-0.1.7-kit.zip",
+    "kit":  "https://github.com/sierrda-dev/asukey/releases/download/v0.1.9/asukey-0.1.9-kit.zip",
     "download":  "https://github.com/sierrda-dev/asukey/releases/latest",
     "minimum":  "",
     "sha256":  {
-                   "asukey-0.1.7-kit.zip":  "2502a1c4b39c3fd4eae0d59f3bb486a421b8e0bbec57f3469427c0dc722e0172"
+                   "asukey-0.1.9-kit.zip":  "c83330ee7381882c073a5ac922ad1db72bd069948ea3583b8772f9e859a56a62",
+                   "asukey-0.1.9-ligne-de-commande.zip":  "b2c298a7c75715341075520d2d8724eaf0e8d197f5753ea215241700e9fbaa53"
                }
 }
