@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-  <meta name="google-site-verification" content="IzMLWtDCDlWgQzCz_ddD5z1cSz17K2w_RDbaGRpxgRk" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>asukey 0.1.9 — gestionnaire de mots de passe pour Windows 11</title>
+<title>asukey 0.2.0 — gestionnaire de mots de passe pour Windows 11</title>
 <style>
   :root { color-scheme: light dark; --accent: #1a6bd8; }
   body { font: 16px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 48px auto; padding: 0 20px; }
@@ -15,9 +14,9 @@
 </style>
 </head>
 <body>
-<h1>asukey 0.1.9</h1>
+<h1>asukey 0.2.0</h1>
 <p class="sub">Gestionnaire de mots de passe local pour Windows 11, chiffré de bout en bout, sans compte en ligne.</p>
-<a class="btn" href="https://apps.microsoft.com/detail/9PNJ014KZP63">Installer depuis le Microsoft Store</a><a class="btn" href="https://github.com/sierrda-dev/asukey/releases/download/v0.1.9/asukey-0.1.9-kit.zip">Télécharger le kit d'installation</a>
+<a class="btn" href="https://apps.microsoft.com/detail/9PNJ014KZP63">Installer depuis le Microsoft Store</a><a class="btn" href="https://github.com/sierrda-dev/asukey/releases/download/v0.2.0/asukey-0.2.0-kit.zip">Télécharger le kit d'installation</a>
 
 
 <section>
@@ -34,25 +33,25 @@
 <section>
 <h2>Nouveautés</h2>
 <ul>
-<li>Couleurs de Fluent : texte principal et secondaire, couleurs d&#39;&#233;tat (succ&#232;s, attention, erreur) de WinUI.</li>
-<li>Contraste &#233;lev&#233; de Windows respect&#233; : couleurs du th&#232;me de contraste choisi, sans transparence.</li>
-<li>&#201;chelle typographique de Fluent partout (12 l&#233;gende, 14 corps, 18, 20 sous-titre, 28 titre) et police Segoe UI Variable.</li>
-<li>Menu du clic droit dans la liste comme l&#39;Explorateur de Windows 11 : actions rapides en ic&#244;nes en haut (copier l&#39;identifiant, le mot de passe, le code 2FA, f…</li>
-<li>Recherche avec suggestions, comme dans Param&#232;tres de Windows 11 : sous le champ du haut, les fiches r&#233;centes (champ vide) ou les &#233;l&#233;ments qui correspondent,…</li>
-<li>Plus de blocages : copie de r&#233;f&#233;rence et presse-papiers occup&#233;, logos de sites lents ou sans adresse (15 s au plus par site, IPv6/IPv4 en alternance).</li>
-<li>Animations de Windows 11 : la fiche glisse doucement &#224; l&#39;ouverture d&#39;un &#233;l&#233;ment, et les cartes des R&#233;glages arrivent l&#39;une apr&#232;s l&#39;autre (coup&#233;es si Windows…</li>
-<li>R&#233;glages comme l&#39;application Param&#232;tres de Windows 11 : une carte par r&#233;glage (espac&#233;es de 4 px), titres de groupe en semi-gras, titre de page en 28 px, navi…</li>
-<li>S&#233;lection multiple et actions group&#233;es : Ctrl+clic, Maj+clic ou Ctrl+A dans la liste, puis favoris, tag, d&#233;placement vers un coffre, archives ou corbeille en…</li>
-<li>Cr&#233;ation assist&#233;e : recherche des services sans tenir compte des accents ni des espaces (&#171; credit agri &#187;), catalogue &#233;largi &#224; plus de 180 services, logo du s…</li>
-<li>Extension : plus aucun innerHTML (fen&#234;tres, ic&#244;nes) ; l&#39;outil de v&#233;rification de Mozilla ne signale plus aucun avertissement.</li>
-<li>Extension : asukey seul gestionnaire du navigateur : un bandeau propose de couper l&#39;enregistrement des mots de passe int&#233;gr&#233; &#224; Chrome, Edge ou Firefox (et le…</li>
-<li>OneDrive en connexion directe : R&#233;glages › Synchronisation › OneDrive › &#171; Se connecter… &#187; ; rien &#224; installer, asukey envoie lui-m&#234;me ton coffre chiffr&#233; (comp…</li>
-<li>Connexion au compte corrig&#233;e : elle pouvait rester bloqu&#233;e apr&#232;s l&#39;autorisation dans le navigateur (le navigateur ouvre des connexions &#224; l&#39;avance sans rien y…</li>
-<li>Connexion aux services en IPv6 et IPv4 en parall&#232;le : quand l&#39;IPv6 de la box ou de l&#39;op&#233;rateur ne m&#232;ne nulle part, asukey passe aussit&#244;t par l&#39;IPv4 (l&#39;&#233;chang…</li>
-<li>Toute erreur de connexion s&#39;affiche, et chaque &#233;tape est not&#233;e dans le journal.</li>
-<li>Fen&#234;tre &#171; Synchroniser avec… &#187; : le texte revient &#224; la ligne au lieu d&#39;&#234;tre coup&#233;.</li>
-<li>Bouton &#171; Se d&#233;connecter de … &#187; directement dans le bandeau et sur la ligne du service (avant : cach&#233; dans le menu ⋯) ; &#171; Arr&#234;ter la synchronisation… &#187; remet…</li>
-<li>Page Synchronisation revue : bandeau d&#39;&#233;tat (service, compte, derni&#232;re synchronisation), puis OneDrive et Google Drive. Dropbox, iCloud Drive et pCloud revie…</li>
+<li>Couleur et ic&#244;ne des coffres : clic droit sur un coffre › Couleur et ic&#244;ne… (8 couleurs, 12 ic&#244;nes, avec aper&#231;u). La couleur se retrouve partout : tuile et s…</li>
+<li>Recherche rapide (ex-Acc&#232;s rapide) : le raccourci global (Ctrl+Maj+Espace), depuis n&#39;importe quelle application, sans ouvrir asukey. Dans asukey, une seule r…</li>
+<li>Fiche plus confortable : un clic sur un champ le copie, avec &#171; ✓ Copi&#233; &#187; &#224; la place de son intitul&#233; ; les sites web rejoignent la carte de l&#39;identifiant et d…</li>
+<li>R&#233;glages : rubriques regroup&#233;es sous &#171; Protection &#187;, &#171; Donn&#233;es &#187; et &#171; Application &#187;, une ic&#244;ne par carte de r&#233;glage.</li>
+<li>Zone de droite quand rien n&#39;est s&#233;lectionn&#233; : deux raccourcis cliquables (Ctrl+N, Ctrl+F) et les &#233;l&#233;ments ouverts r&#233;cemment. Aide devient un bouton rond disc…</li>
+<li>Sentinelle : pastille de gravit&#233; sur chaque carte (Urgent, &#192; faire, Conseil, Rangement) et ic&#244;ne dans sa couleur ; la derni&#232;re carte d&#39;une ligne incompl&#232;te p…</li>
+<li>Page Partage : ta photo partout o&#249; tu apparais (activit&#233;, membres), boutons Inviter, Ouvrir et G&#233;rer c&#244;te &#224; c&#244;te, activit&#233; limit&#233;e aux 5 derni&#232;res modificati…</li>
+<li>Confidentialit&#233; (R&#233;glages › Protection) : tout ce qui peut passer par Internet au m&#234;me endroit (logos des sites, v&#233;rification des fuites, mises &#224; jour, synch…</li>
+<li>&#171; Se connecte avec &#187; pour les identifiants : Google, Apple, Microsoft, Facebook, GitHub… (ou saisie libre), pour se souvenir par o&#249; l&#39;on s&#39;est inscrit. Affic…</li>
+<li>Extension : &#171; Continuer avec Google &#187; : quand tu te connectes &#224; un site avec Google, Apple, Microsoft, Facebook ou GitHub, l&#39;extension propose au retour sur…</li>
+<li>Initiales des &#233;l&#233;ments sans logo : deux lettres sur un fond pastel propre &#224; chaque site, plus lisibles qu&#39;une seule lettre sur une couleur vive.</li>
+<li>Survol d&#39;un champ (identifiant, mot de passe, site…) : la ligne se teinte, &#171; Copier &#187; appara&#238;t &#224; droite (un clic n&#39;importe o&#249; sur la ligne copie) et un chevr…</li>
+<li>Passkeys dans la fiche : une ligne &#171; passkey &#183; cr&#233;&#233;e hier &#187; dans la carte de l&#39;identifiant, &#224; c&#244;t&#233; du nom d&#39;utilisateur, au lieu d&#39;une section &#224; part.</li>
+<li>Filtre de cat&#233;gories : seulement les cat&#233;gories pr&#233;sentes, avec leur nombre align&#233; &#224; droite et une coche sur celle choisie, &#224; jour &#224; chaque ouverture.</li>
+<li>&#201;diteur : le coffre de destination, &#224; c&#244;t&#233; d&#39;&#171; Enregistrer &#187;, prend la couleur et l&#39;ic&#244;ne du coffre.</li>
+<li>pCloud : pas de connexion directe (pCloud a refus&#233; l&#39;acc&#232;s &#224; son API) ; code correspondant retir&#233;. pCloud reste utilisable par son application pCloud Drive.</li>
+<li>Publication s&#233;curis&#233;e (apr&#232;s l&#39;incident 1Password de novembre 2026) : aucun identifiant cloud dans le code public (CloudApps.Local.cs, fichier local de l&#39;&#233;di…</li>
+<li>All&#232;gement : retrait des fonctions d&#233;veloppeur masqu&#233;es depuis la 0.1.5.1 (ligne de commande, &#171; Copier la r&#233;f&#233;rence &#187;, serveur MCP, extension VS Code, analys…</li>
+<li>Mode pr&#233;sentation (menu du compte, Ctrl+Maj+P, ou la recherche rapide) : pour une r&#233;union, un tutoriel ou une capture. asukey redevient visible dans les part…</li>
 </ul>
 </section>
 

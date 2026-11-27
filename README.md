@@ -2,51 +2,40 @@
 
 Gestionnaire de mots de passe **local** pour Windows 11, chiffré de bout en bout, sans compte en ligne.
 
-**Dernière version : 0.1.9** (25 novembre 2026)
+**Dernière version : 0.2.0** (27 novembre 2026)
 
 - **Installer** : [Microsoft Store](https://apps.microsoft.com/detail/9PNJ014KZP63) (conseillé : mises à jour automatiques)
 - **Télécharger** : [https://sierrda-dev.github.io/asukey](https://sierrda-dev.github.io/asukey) (kit d'installation)
 - **Déjà installé** (0.1.2 ou plus récent) : asukey propose les mises à jour tout seul.
 - **Toutes les versions** : [Releases](https://github.com/sierrda-dev/asukey/releases) · [Journal des versions](CHANGELOG.md)
 
-## Nouveautés de la 0.1.9
+## Nouveautés de la 0.2.0
 
-**Projets renommés** (code source uniquement) : `asukey.sln`, `Asukey.App`, `Asukey.Core`, `Asukey.Cli`, `Asukey.Tests`, espaces de noms `Asukey.*`. L'application s'appelle désormais **asukey.exe** (Gestionnaire des tâches). Les données gardent leurs emplacements (`%LOCALAPPDATA%\Coffre`, clé Windows Hello, stratégie d'entreprise) : rien ne change pour les utilisateurs.
-
-**Publication GitHub** : le Microsoft Store est proposé en premier (site, README du dépôt, notes de version) dès que son identifiant est dans `packaging/microsoft-store.txt` ; la ligne de commande `asukey.exe` est jointe à chaque version (`asukey-<version>-ligne-de-commande.zip`), à côté du kit.
-
-**Design Windows 11 (Fluent 2)**
-- Couleurs de Fluent : texte principal et secondaire, couleurs d'état (succès, attention, erreur) de WinUI.
-- **Contraste élevé** de Windows respecté : couleurs du thème de contraste choisi, sans transparence.
-- Échelle typographique de Fluent partout (12 légende, 14 corps, 18, 20 sous-titre, 28 titre) et police Segoe UI Variable.
-- **Menu du clic droit dans la liste comme l'Explorateur de Windows 11** : actions rapides en icônes en haut (copier l'identifiant, le mot de passe, le code 2FA, favori, corbeille), le reste en liste dessous.
-- **Recherche avec suggestions**, comme dans Paramètres de Windows 11 : sous le champ du haut, les fiches récentes (champ vide) ou les éléments qui correspondent, les rubriques des réglages et « Créer un identifiant « … » ». Flèches pour choisir, Entrée pour ouvrir, Échap pour fermer ; la liste de gauche continue de se filtrer.
-- **Plus de blocages** : copie de référence et presse-papiers occupé, logos de sites lents ou sans adresse (15 s au plus par site, IPv6/IPv4 en alternance).
-- Animations de Windows 11 : la fiche glisse doucement à l'ouverture d'un élément, et les cartes des Réglages arrivent l'une après l'autre (coupées si Windows désactive les animations).
-- **Réglages comme l'application Paramètres de Windows 11** : une carte par réglage (espacées de 4 px), titres de groupe en semi-gras, titre de page en 28 px, navigation à icônes colorées avec la barre d'accent sur la rubrique ouverte.
-
-**Productivité**
-- **Sélection multiple et actions groupées** : Ctrl+clic, Maj+clic ou Ctrl+A dans la liste, puis favoris, tag, déplacement vers un coffre, archives ou corbeille en une fois (restauration et suppression définitive dans la corbeille). Annulable comme une action simple ; les éléments en lecture seule d'un coffre partagé ne sont pas touchés.
-- **Création assistée** : recherche des services sans tenir compte des accents ni des espaces (« credit agri »), catalogue élargi à plus de 180 services, logo du site dans les résultats ; une adresse tapée (« exemple.fr ») crée directement la connexion avec son titre. Dans l'éditeur, le titre se remplit d'après l'adresse, et un identifiant oublié est signalé avant l'enregistrement.
-- Extension : plus aucun `innerHTML` (fenêtres, icônes) ; l'outil de vérification de Mozilla ne signale plus aucun avertissement.
-- **Extension : asukey seul gestionnaire du navigateur** : un bandeau propose de couper l'enregistrement des mots de passe intégré à Chrome, Edge ou Firefox (et le remplissage des cartes et adresses dans Chrome et Edge), pour ne plus avoir deux propositions à chaque connexion. Autorisation facultative « privacy », demandée seulement à ce moment.
-
-**Synchronisation directe**
-- **OneDrive en connexion directe** : Réglages › Synchronisation › OneDrive › « Se connecter… » ; rien à installer, asukey envoie lui-même ton coffre chiffré (comptes Microsoft personnels et professionnels).
-- Connexion au compte corrigée : elle pouvait rester bloquée après l'autorisation dans le navigateur (le navigateur ouvre des connexions à l'avance sans rien y envoyer ; asukey attendait sur l'une d'elles).
-- Connexion aux services en IPv6 et IPv4 en parallèle : quand l'IPv6 de la box ou de l'opérateur ne mène nulle part, asukey passe aussitôt par l'IPv4 (l'échange du code avec Microsoft dépassait son délai).
-- Toute erreur de connexion s'affiche, et chaque étape est notée dans le journal.
-- Fenêtre « Synchroniser avec… » : le texte revient à la ligne au lieu d'être coupé.
-- Bouton « Se déconnecter de … » directement dans le bandeau et sur la ligne du service (avant : caché dans le menu ⋯) ; « Arrêter la synchronisation… » remet le coffre sur ce PC quand il passe par l'application d'un service.
-- Page Synchronisation revue : bandeau d'état (service, compte, dernière synchronisation), puis OneDrive et Google Drive. Dropbox, iCloud Drive et pCloud reviendront avec leur connexion directe (un service déjà utilisé reste affiché). Logo officiel du service si son fichier est déposé dans `Assets\Services`.
+- **Couleur et icône des coffres** : clic droit sur un coffre › Couleur et icône… (8 couleurs, 12 icônes, avec aperçu). La couleur se retrouve partout : tuile et sélection dans la barre latérale, pastille sur les éléments quand la liste mélange plusieurs coffres, étiquette teintée dans la fiche, loupe de la recherche. Pour un coffre partagé, seul le propriétaire change la couleur ; l'icône, chacun la choisit pour soi. Masqué en contraste élevé (Windows impose ses couleurs).
+- **Recherche rapide** (ex-Accès rapide) : le raccourci global (Ctrl+Maj+Espace), depuis n'importe quelle application, sans ouvrir asukey. Dans asukey, une seule recherche : la barre du haut (Ctrl+F ou Ctrl+K), avec ses suggestions. Sélection au style Windows 11, coffre de chaque élément, et des actions : générer un mot de passe (copié), mode présentation, ouvrir ou verrouiller asukey.
+- **Fiche plus confortable** : un clic sur un champ le copie, avec « ✓ Copié » à la place de son intitulé ; les sites web rejoignent la carte de l'identifiant et du mot de passe ; titres de section sans capitales (style Windows 11) ; « Dernière modification hier à 15:11 » sans les secondes.
+- **Réglages** : rubriques regroupées sous « Protection », « Données » et « Application », une icône par carte de réglage.
+- **Zone de droite** quand rien n'est sélectionné : deux raccourcis cliquables (Ctrl+N, Ctrl+F) et les éléments ouverts récemment. **Aide** devient un bouton rond discret.
+- **Sentinelle** : pastille de gravité sur chaque carte (Urgent, À faire, Conseil, Rangement) et icône dans sa couleur ; la dernière carte d'une ligne incomplète prend la place restante.
+- **Page Partage** : ta photo partout où tu apparais (activité, membres), boutons Inviter, Ouvrir et Gérer côte à côte, activité limitée aux 5 dernières modifications avec un lien « Tout afficher ».
+- **Confidentialité** (Réglages › Protection) : tout ce qui peut passer par Internet au même endroit (logos des sites, vérification des fuites, mises à jour, synchronisation), avec pour chaque fonction ce qui est envoyé et à qui ; et ce qui reste toujours sur l'ordinateur (extension, analyses de la Sentinelle, aucune statistique). Les logos des sites se règlent désormais ici.
+- **« Se connecte avec »** pour les identifiants : Google, Apple, Microsoft, Facebook, GitHub… (ou saisie libre), pour se souvenir par où l'on s'est inscrit. Affiché dans la liste quand il n'y a pas de nom d'utilisateur, et compris par la recherche.
+- **Extension : « Continuer avec Google »** : quand tu te connectes à un site avec Google, Apple, Microsoft, Facebook ou GitHub, l'extension propose au retour sur le site d'enregistrer le compte (« Se connecte avec Google »), sans mot de passe. Si un identifiant du site existe déjà sans mot de passe, le service y est simplement noté. Jamais de doublon, rien n'est proposé sur la page du service lui-même.
+- **Initiales des éléments sans logo** : deux lettres sur un fond pastel propre à chaque site, plus lisibles qu'une seule lettre sur une couleur vive.
+- **Survol d'un champ** (identifiant, mot de passe, site…) : la ligne se teinte, « Copier » apparaît à droite (un clic n'importe où sur la ligne copie) et un chevron ouvre les autres actions : Révéler, Afficher en gros caractères, Ouvrir le site. Une pastille en bas au centre dit ce qui a été copié (« Mot de passe copié »).
+- **Passkeys dans la fiche** : une ligne « passkey · créée hier » dans la carte de l'identifiant, à côté du nom d'utilisateur, au lieu d'une section à part.
+- **Filtre de catégories** : seulement les catégories présentes, avec leur nombre aligné à droite et une coche sur celle choisie, à jour à chaque ouverture.
+- **Éditeur** : le coffre de destination, à côté d'« Enregistrer », prend la couleur et l'icône du coffre.
+- **pCloud** : pas de connexion directe (pCloud a refusé l'accès à son API) ; code correspondant retiré. pCloud reste utilisable par son application pCloud Drive.
+- **Publication sécurisée** (après l'incident 1Password de novembre 2026) : aucun identifiant cloud dans le code public (`CloudApps.Local.cs`, fichier local de l'éditeur ; sans lui, tout compile et les services restent « pas encore activés »), CI sans certificat ni secret, publication refusée si les identifiants cloud manquent, et `tools\verifier-publication.ps1` pour vérifier à tout moment que le site et la version GitHub sont exactement ce qui a été signé. Liste des comptes à protéger : `docs/SECURITE-PUBLICATION.md`.
+- **Allègement** : retrait des fonctions développeur masquées depuis la 0.1.5.1 (ligne de commande, « Copier la référence », serveur MCP, extension VS Code, analyse de secrets dans le code, signature Git, import .env) et du code devenu inutile (161 textes, réglages et méthodes jamais utilisés). Les éléments « Environnement » existants restent lisibles et modifiables. Un hôte de test (`tests/Asukey.TestHost`, jamais livré) remplace la ligne de commande pour les tests de l'extension et le coffre de démonstration.
+- **Mode présentation** (menu du compte, Ctrl+Maj+P, ou la recherche rapide) : pour une réunion, un tutoriel ou une capture. asukey redevient visible dans les partages d'écran, mais aucun secret ne peut s'afficher (pas de bouton Afficher, codes 2FA masqués, pas d'affichage en grand) ; copier et remplir fonctionnent toujours. Contour et halo ambrés autour de la fenêtre et rappel « Mode présentation » en haut, arrêt automatique au verrouillage, jamais enregistré.
 
 ## Installer
 
-1. Télécharge `asukey-0.1.9-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/asukey/releases/latest).
+1. Télécharge `asukey-0.2.0-kit.zip` depuis la [dernière version](https://github.com/sierrda-dev/asukey/releases/latest).
 2. Clic droit › **Extraire tout**, puis double-clic sur **Installer asukey**.
 3. Windows demande d'approuver l'éditeur d'asukey une seule fois par ordinateur.
-
-**Ligne de commande** (développeurs) : `asukey-0.1.9-ligne-de-commande.zip` dans la [dernière version](https://github.com/sierrda-dev/asukey/releases/latest), puis double-clic sur **Installer la ligne de commande**.
 
 ## Sécurité
 
